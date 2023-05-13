@@ -1,21 +1,22 @@
 import { useEffect } from "react";
 import "./App.scss";
-import { Application } from "@splinetool/runtime";
+import Spline from '@splinetool/react-spline';
 
 function App() {
-  useEffect(() => {
-    const canvas = document.querySelector("#canvas3d");
+  // useEffect(() => {
+  //   const canvas = document.querySelector("#canvas3d");
 
-    const app = new Application(canvas);
+  //   const app = new Application(canvas);
 
-    app.load("https://prod.spline.design/Rj7Gnb9FoqvWt6Nq/scene.splinecode");
-  }, []);
-
+  //   app.load("https://prod.spline.design/Rj7Gnb9FoqvWt6Nq/scene.splinecode");
+  // }, []);
+  
+  
   return (
     <div className="App">
       <div className="navbar">
         <div className="logo">
-          <canvas id="canvas3d"></canvas>
+        <Spline scene="https://prod.spline.design/Rj7Gnb9FoqvWt6Nq/scene.splinecode" />
           <img src="logo.png" alt="" />
         </div>
         <div className="options">
@@ -57,7 +58,7 @@ function App() {
           <h1></h1>
         </div>
         <div className="content">
-          
+
         </div>
       </div>
     </div>
