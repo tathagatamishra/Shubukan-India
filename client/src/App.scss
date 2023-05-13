@@ -2,6 +2,7 @@
   height: 100dvh;
   display: flex;
   flex-direction: column;
+  // text-emphasis-style: black;
 
   & .navbar {
     border-bottom: solid 5px rgb(189, 189, 189);
@@ -63,7 +64,7 @@
           transition: 500ms;
 
           & p {
-            border-bottom: solid rgb(255, 120, 120);
+            border-bottom: solid rgb(255, 66, 66);
             transition: 300ms;
             width: 100%;
             transform: translateY(5px);
@@ -73,6 +74,22 @@
           font-size: 1rem;
           padding-bottom: 1rem;
           transform: translateY(-3px);
+        }
+
+        &:active {
+          transition: 500ms;
+
+          & p {
+            border-bottom: solid rgb(255, 66, 66);
+            transition: 300ms;
+            width: 100%;
+            transform: translateY(5px);
+          }
+
+          padding: 0;
+          font-size: 1rem;
+          padding-bottom: 1rem;
+          transform: translateY(3px);
         }
       }
     }
@@ -84,6 +101,7 @@
     flex-direction: column;
 
     & .hero {
+      min-height: 40rem;
       height: fit-content;
       width: 100%;
       background-image: linear-gradient(to left, transparent, white), url("uema.jpg"), ;
@@ -93,6 +111,7 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      
 
       & h1 {
         font-family: 'Wix Madefor Display', sans-serif;
@@ -103,6 +122,12 @@
         width: 50%;
         height: fit-content;
         padding: 2rem 0 0 1rem;
+        text-shadow: 0 0 20px white;
+
+        &::selection {
+          color: rgb(255, 255, 255);
+          background: rgb(0, 0, 0); 
+        }
 
         @media screen and (max-width: 400px) {
           font-size: .8rem;
@@ -115,6 +140,12 @@
           font-weight: bolder;
           font-size: 3rem;
           // text-align: justify;
+          text-shadow: 0 0 10px white;
+
+          &::selection {
+            color: rgb(255, 255, 255);
+            background: rgb(0, 0, 0); 
+          }
 
           @media screen and (max-width: 400px) {
             font-size: 1.8rem;
