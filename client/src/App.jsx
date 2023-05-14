@@ -1,22 +1,38 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./App.scss";
 import Spline from "@splinetool/react-spline";
 
 function App() {
-  // useEffect(() => {
-  //   const canvas = document.querySelector("#canvas3d");
+  const [size, setSize] = useState(null);
 
-  //   const app = new Application(canvas);
+  const Component1 = (
+    <Spline scene="https://prod.spline.design/IRCi38KJr6aI3aIN/scene.splinecode" />
+  );
 
-  //   app.load("https://prod.spline.design/Rj7Gnb9FoqvWt6Nq/scene.splinecode");
-  // }, []);
+  const Component2 = (
+    <Spline scene="https://prod.spline.design/Rj7Gnb9FoqvWt6Nq/scene.splinecode" />
+  );
+
+  const mql = window.matchMedia("(max-width: 600px)");
+
+  useEffect(() => {
+    mql.addEventListener("change", (e) => {
+      const mobileView = e.matches;
+
+      if (mobileView) {
+        setSize(Component1);
+      } else {
+        setSize(Component2);
+      }
+    });
+  }, [size]);
 
   return (
     <div className="App">
       <div className="navbar">
         <div className="logo">
-          <Spline scene="https://prod.spline.design/Rj7Gnb9FoqvWt6Nq/scene.splinecode" />
-          <img src="logo.png" alt="" />
+          {size}
+          <img src="logo.png" />
         </div>
         <div className="options">
           <p>
