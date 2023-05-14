@@ -1,0 +1,11 @@
+.Footer {
+    height: 5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    box-shadow: 0 0 15px black;
+    border-top: solid 5px rgb(189, 189, 189);
+    z-index: 1;
+}

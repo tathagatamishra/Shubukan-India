@@ -1,84 +1,31 @@
 import { useEffect, useState } from "react";
 import "./App.scss";
-import Spline from "@splinetool/react-spline";
+import gsap from "gsap";
+import Navbar from "./Component/Navbar/Navbar";
+import Footer from "./Component/Footer/footer";
+import Home from "./Component/Home/Home";
 
 function App() {
-  const [size, setSize] = useState(null);
+  document.addEventListener("mousemove", (ev) => {
+    const x = ev.clientX,
+      y = ev.clientY;
 
-  const Component1 = (
-    <Spline scene="https://prod.spline.design/IRCi38KJr6aI3aIN/scene.splinecode" />
-  );
-
-  const Component2 = (
-    <Spline scene="https://prod.spline.design/Rj7Gnb9FoqvWt6Nq/scene.splinecode" />
-  );
-
-  const mql = window.matchMedia("(max-width: 600px)");
-
-  useEffect(() => {
-    mql.addEventListener("change", (e) => {
-      const mobileView = e.matches;
-
-      if (mobileView) {
-        setSize(Component1);
-      } else {
-        setSize(Component2);
-      }
+    // lag cursor behind mouse
+    gsap.to("#cursor-follow", {
+      duration: 0.2,
+      x,
+      y,
     });
-  }, [size]);
+  });
 
   return (
     <div className="App">
-      <div className="navbar">
-        <div className="logo">
-          {size}
-          <img src="logo.png" />
-        </div>
-        <div className="options">
-          <p>
-            HOME <p></p>
-          </p>
-          <p>
-            ORGANIZATION <p></p>
-          </p>
-          <p>
-            CALENDAR <p></p>
-          </p>
-          <p>
-            MEMBER <p></p>
-          </p>
-          <p>
-            SERVICE <p></p>
-          </p>
-          <p>
-            BLOG <p></p>
-          </p>
-          <p>
-            CONTACT <p></p>
-          </p>
-          <p>
-            DOWNLOAD <p></p>
-          </p>
-        </div>
-      </div>
+      <div id="cursor-follow"></div>
+      <Navbar />
       <div className="webBody">
-        <div className="hero">
-          <h1>
-            <h1>Efficiency Is Claver Laziness</h1>
-            Today, karate is a martial art known and respected worldwide as an
-            effective combative art. Its birthplace, the small islands of
-            Okinawa in Japan, was once known as Ryukyu, an independent kingdom.
-            Shorin Ryu is one of Okinawa’s three main streams of Karate (Goju
-            Ryu, Uechi Ryu, Shorin Ryu). In 1933, Master Choshin Chibana named
-            Shorin Ryu. In 1948, they organized Okinawa Shorin Ryu Karate-do
-            Association. They took over the Shuri-te stream. There is a Dojo not
-            only in Okinawa but also overseas. Shorin Ryu Shubukan was founded
-            by Sensei Joki Uema.
-          </h1>
-          <h1></h1>
-        </div>
-        <div className="content"></div>
+        <Home />
       </div>
+      <Footer />
     </div>
   );
 }
