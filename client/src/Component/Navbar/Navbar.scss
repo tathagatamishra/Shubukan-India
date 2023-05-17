@@ -1,19 +1,29 @@
-.Navbar {
-    border-bottom: solid 5px rgb(189, 189, 189);
-    height: 5rem;
+#Navbar {
+    z-index: 10;
+    
+    height: 10rem;
+    width: 100%;
     padding: 1rem;
+    position: fixed;
+    top: 0rem;
+    
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    box-shadow: 0 0 15px black;
-    z-index: 1;
+    
+    border: solid;
+    background-image: linear-gradient(white, white, transparent);
+    // box-shadow: 0 0 15px black;
+    // border-bottom: solid 5px rgb(189, 189, 189);
+
+    transition: 0.5s;
 
     & .logo {
-        // border: solid blue;
+        height: 5rem;
+
         display: flex;
         flex-direction: row;
-        height: 5rem;
 
         & canvas {
             // height: 100% !important;

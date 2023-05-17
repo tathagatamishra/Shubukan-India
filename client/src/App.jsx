@@ -21,10 +21,13 @@ function App() {
   return (
     <div className="App">
       <div id="cursor-follow"></div>
+
       <Navbar />
+
       <div className="webBody">
         <Home />
       </div>
+
       <Footer />
     </div>
   );

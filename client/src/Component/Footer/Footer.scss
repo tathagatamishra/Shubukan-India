@@ -1,11 +1,37 @@
 .Footer {
-    height: 5rem;
-    padding: 1rem;
+    z-index: 1;
+    height: fit-content;
+    // position: fixed;
+    bottom: 0;
+
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
+    
+    color: #fcfdfd;
+    background: #111c1f;
     box-shadow: 0 0 15px black;
     border-top: solid 5px rgb(189, 189, 189);
-    z-index: 1;
+    
+    & .footLeft {
+        width: 50%;
+        height: 30rem;
+        padding: 1rem;
+        border: solid red;
+        
+        & .newsLetter {
+            height: 50%;
+            border: solid yellow;
+        }
+        & .contactUs {
+            height: 50%;
+            border: solid yellow;
+            
+        }
+    }
+    & .footRight {
+        width: 50%;
+        height: 30rem;
+        padding: 1rem;
+        border: solid red;
+    }
 }

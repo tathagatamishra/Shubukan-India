@@ -1,19 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&family=Wix+Madefor+Display:wght@500&display=swap');
 
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
 html,
 body {
-  height: 100%;
-  overflow-x: hidden;
-  // border: solid 2px red;
+  margin: 0px;
+  }
+  
+  body {
 
-  // @media screen and (min-width: 900px) {
-  //   font-size: 75%;
-  // }
-  cursor: url("sym88.ani"), auto;
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background: white;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: black;
+    // border-radius: 50px;
+    border-top: solid 10px tomato;
+    border-bottom: solid 10px tomato;
+  }
 }

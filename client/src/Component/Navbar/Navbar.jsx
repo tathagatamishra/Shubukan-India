@@ -1,41 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
+import $ from "jquery";
 import Spline from "@splinetool/react-spline";
-import "./Navbar.scss"
+import "./Navbar.scss";
 
 export default function Navbar() {
-  // const [size, setSize] = useState(null);
+  const [position, setPosition] = useState({ top: "0rem" });
+  const [lastScrollTop, setLastScrollTop] = useState(Infinity);
 
-  // const Component1 = <Spline scene="https://prod.spline.design/IRCi38KJr6aI3aIN/scene.splinecode" />;
+  // This Variable will store the top position
 
-  // const Component2 = <Spline scene="https://prod.spline.design/Rj7Gnb9FoqvWt6Nq/scene.splinecode" />;
+  window.addEventListener("scroll", function () {
+    //on every scroll this function will be called
 
-  // const setLogo = (html) => {
-  //   const logo = document.querySelector("logo");
-  //   logo.innerHTML = html;
-  // };
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    //This line will get the location on scroll
 
-  // const mql = window.matchMedia("(max-width: 600px)");
+    if (scrollTop > lastScrollTop) {
+      //if it will be greater than the previous
+      setPosition({ top: "-10rem" });
+      //set the value to the negative of height of navbar
+    } else {
+      setPosition({ top: "0rem" });
+    }
 
-  // useEffect(() => {
-  //   mql.addEventListener("change", (e) => {
-  //     const mobileView = e.matches;
-
-  //     if (mobileView) {
-  //       setSize(Component1);
-  //     } else {
-  //       setSize(Component2);
-  //     }
-  //   });
-  //   console.log(size);
-  // }, [size]);
+    setLastScrollTop(scrollTop); //New Position Stored
+  });
 
   return (
-    <div className="Navbar">
+    <div id="Navbar" style={position}>
       <section className="logo">
         <Spline scene="https://prod.spline.design/IRCi38KJr6aI3aIN/scene.splinecode" />
         <img src="logo.png" />
       </section>
-      <section className="options">
+      <nav className="options">
         <div className="menuDiv">
           <p>HOME</p>
           <div></div>
@@ -68,7 +65,7 @@ export default function Navbar() {
           <p>DOWNLOAD</p>
           <div></div>
         </div>
-      </section>
+      </nav>
     </div>
   );
 }
