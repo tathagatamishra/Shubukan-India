@@ -21,6 +21,8 @@ function App() {
   return (
     <div className="App">
       <div id="cursor-follow"></div>
+      <div className="tree"></div>
+      <div className="line"></div>
 
       <Navbar />
 

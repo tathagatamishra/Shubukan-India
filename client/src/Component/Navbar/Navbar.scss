@@ -1,18 +1,18 @@
 #Navbar {
     z-index: 10;
-    
+
     height: 10rem;
     width: 100%;
-    padding: 1rem;
+    // padding: 1rem;
     position: fixed;
     top: 0rem;
-    
+
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    
-    border: solid;
+
+    // border: solid;
     background-image: linear-gradient(white, white, transparent);
     // box-shadow: 0 0 15px black;
     // border-bottom: solid 5px rgb(189, 189, 189);
@@ -21,9 +21,12 @@
 
     & .logo {
         height: 5rem;
+        margin: 1rem 0 0 1rem;
 
         display: flex;
         flex-direction: row;
+
+        // border: solid red;
 
         & canvas {
             // height: 100% !important;
@@ -40,35 +43,50 @@
 
     & .options {
         height: 5rem;
-        width: 40rem;
+        width: fit-content;
+        margin: 1rem 1rem 0 0;
+
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
+
         // border: solid red;
 
         & .menuDiv {
+            height: 100%;
+            width: fit-content;
+            margin-left: 1rem;
+
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100%;
-            width: fit-content;
-            margin-left: 1rem;
             // margin-right: .5rem;
             // border: solid;
 
             & p {
-                font-family: 'Secular One', sans-serif;
-                font-size: .8rem;
                 padding: 0;
-                transition: 300ms;
                 margin: 0;
 
+                transition: 300ms;
+                
+                font-size: .9rem;
+                font-weight: 900;
+                // font-family: 'Amarante', cursive;
+                // font-family: 'Andika', sans-serif;
+                // font-family: 'Bellefair', serif;
+                // font-family: 'Capriola', sans-serif;
+                // font-family: 'Flamenco', cursive;
+                // font-family: 'Fredericka the Great', cursive;
+                font-family: 'GFS Neohellenic', sans-serif;
+                // font-family: 'Pompiere', cursive;
+                // font-family: 'Tenali Ramakrishna', sans-serif;
+
                 &::selection {
-                    color: red;
-                    background: yellow; 
-                  }
+                    color: rgb(216, 86, 86);
+                    background: rgb(248, 235, 141);
+                }
             }
 
             & div {
@@ -82,16 +100,16 @@
 
             &:hover {
                 transition: 500ms;
-                
+
                 & p {
                     padding: 0;
                     font-size: 1rem;
                     padding-bottom: 1rem;
                     transform: translateY(-2px);
                 }
-                
+
                 & div {
-                    border-bottom: solid rgb(255, 66, 66);
+                    border-bottom: solid #A64B37;
                     transition: 300ms;
                     width: 100%;
                     transform: translateY(-2px);
@@ -102,16 +120,10 @@
                 transition: 500ms;
 
                 & p {
-                    padding: 0;
-                    font-size: 1rem;
-                    padding-bottom: 1rem;
                     transform: translateY(6px);
                 }
-                
+
                 & div {
-                    border-bottom: solid rgb(255, 66, 66);
-                    transition: 300ms;
-                    width: 100%;
                     transform: translateY(-6px);
                 }
             }

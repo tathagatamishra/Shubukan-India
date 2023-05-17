@@ -4,7 +4,43 @@
 
   display: flex;
   flex-direction: column;
-  font-family: 'Wix Madefor Display', sans-serif;
+
+  & .tree {
+    z-index: 1;
+    height: 500px;
+    width: 500px;
+    
+    top: 0%;
+    right: 0%;
+    position: absolute;
+    
+    background-image: url("tree.png");
+    background-size: 500px 500px;
+    transform: scaleX(-1)
+  }
+  
+  & .line {
+    z-index: 0;
+    height: 45rem;
+    right: 20%;
+    position: absolute;
+    border-left: solid #A69485;
+
+    animation-name: anim;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+
+    @keyframes anim {
+      from {
+        transform: translateY(-50%);
+      }
+
+      to {
+        transform: translateY(0%);
+      }
+    }
+
+  }
 
   & .webBody {
     height: fit-content;
@@ -31,7 +67,7 @@
     border-radius: 50px;
     pointer-events: none;
     user-select: none;
-    backdrop-filter: saturate(1)  invert(100%) hue-rotate(90deg);
+    backdrop-filter: saturate(1) invert(100%) hue-rotate(90deg);
     z-index: 100;
   }
 
