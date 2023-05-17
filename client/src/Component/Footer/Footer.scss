@@ -1,37 +1,269 @@
 .Footer {
     z-index: 1;
-    height: fit-content;
+    height: 30rem;
     // position: fixed;
     bottom: 0;
 
     display: flex;
     flex-direction: row;
-    
-    color: #fcfdfd;
-    background: #262626;
-    box-shadow: 0 0 15px black;
-    border-top: solid 5px rgb(189, 189, 189);
-    
+
+    // color: #fcfdfd;
+    background: #26262600;
+    background: wheat;
+    background-image: url("paper.jpg");
+    background-size: 250px 250px;
+    // box-shadow: 0 0 15px black;
+    // border-top: solid 5px rgb(189, 189, 189);
+
     & .footLeft {
+        z-index: 1;
         width: 50%;
         height: 30rem;
         padding: 1rem;
-        border: solid red;
-        
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        background-image: linear-gradient(to bottom,
+                transparent 0%,
+                #2d2d2d 70%,
+                #262626 80%,
+                #1f1f1f 90%,
+                #0c0c18 100%);
+        // border: solid red;
+
         & .newsLetter {
-            height: 50%;
-            border: solid yellow;
+            // height: 50%;
+            margin-top: 8rem;
+            // border: solid yellow;
+            transition: 200ms;
+
+            & h1 {
+                margin: 0 0 1rem 0;
+                // border: solid yellow;
+                color: #2b2828;
+                font-size: 2.5rem;
+                line-height: 2.5rem;
+                // font-family: 'Amarante', cursive;
+                // font-family: 'Andika', sans-serif;
+                // font-family: 'Bellefair', serif;
+                // font-family: 'Capriola', sans-serif;
+                // font-family: 'Flamenco', cursive;
+                // font-family: 'Fredericka the Great', cursive;
+                // font-family: 'GFS Neohellenic', sans-serif;
+                // font-family: 'Pompiere', cursive;
+                font-family: 'Tenali Ramakrishna', sans-serif;
+                transform: translateY(40%);
+                user-select: none;
+                transition: 200ms;
+            }
+
+            & form {
+                width: fit-content;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+
+                & input {
+                    width: 20rem;
+                    height: 4rem;
+                    padding: 1rem 0 0 0;
+                    background: transparent;
+                    border: none;
+                    // border: solid;
+                    
+                    color: #dfd5d5;
+                    font-size: 1.5rem;
+                    // font-family: 'Amarante', cursive;
+                    // font-family: 'Andika', sans-serif;
+                    // font-family: 'Bellefair', serif;
+                    // font-family: 'Capriola', sans-serif;
+                    // font-family: 'Flamenco', cursive;
+                    // font-family: 'Fredericka the Great', cursive;
+                    // font-family: 'GFS Neohellenic', sans-serif;
+                    // font-family: 'Pompiere', cursive;
+                    font-family: 'Tenali Ramakrishna', sans-serif;
+
+                    &:focus {
+                        outline: none;
+                    }
+
+                    &::selection {
+                        color: #212121;
+                        background: #858E78;
+                    }
+                }
+
+                & button {
+                    border-radius: 50px;
+                    height: 5rem;
+                    width: 5rem;
+                    font-size: 2.5rem;
+                    // transform: rotate(-10deg);
+                    color: #F2E9E9;
+                    background: #403D3C;
+                    border: 2px solid #BFB2AA;
+                    transition: 200ms;
+
+                    &:hover {
+                        padding: 0 0 0 2.8rem;
+                        transform: translateX(-10%);
+                    }
+                }
+            }
+
+            & div {
+                border-bottom: solid 2px #5f443f;
+                width: 20rem;
+                height: 0;
+                transform: translate(20%, -500%);
+                transition: 200ms;
+            }
+
+            &:hover {
+                transition: 200ms;
+
+                & h1 {
+                    text-shadow: 0 0 10px #b8aa8fa7;
+                }
+                & div {
+                    border-bottom: solid 2px #5f443f;
+                    width: 20rem;
+                    height: 0;
+                    transform: translate(0%, -500%);
+                }
+            }
         }
+
         & .contactUs {
-            height: 50%;
-            border: solid yellow;
-            
+            height: fit-content;
+            margin-top: 5rem;
+
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+            // border: solid yellow;
+
+            & h1 {
+                z-index: 0;
+                margin: 0;
+                padding: 0;
+                width: fit-content;
+
+                font-size: 2.5rem;
+                letter-spacing: 4px;
+                line-height: 2.3rem;
+                // font-family: 'Amarante', cursive;
+                // font-family: 'Andika', sans-serif;
+                // font-family: 'Bellefair', serif;
+                // font-family: 'Capriola', sans-serif;
+                // font-family: 'Flamenco', cursive;
+                // font-family: 'Fredericka the Great', cursive;
+                // font-family: 'GFS Neohellenic', sans-serif;
+                // font-family: 'Pompiere', cursive;
+                font-family: 'Tenali Ramakrishna', sans-serif;
+
+                color: #F2E9E9;
+                text-shadow: 2px 2px 0px black;
+                user-select: none;
+
+                transform: translate(10%, 0%);
+                transition: 200ms;
+            }
+
+            & div {
+                z-index: 1;
+                width: 12rem;
+                height: 1rem;
+                margin: 0;
+                padding: 0;
+
+                font-size: 4rem;
+                // border: solid;
+                backdrop-filter: invert(100%);
+
+                transform: translate(0%, 60%);
+                transition: 200ms;
+            }
+
+            &:hover {
+
+                & h1 {
+                    font-size: 2.5rem;
+                    letter-spacing: 10px;
+
+                    color: #ffffff;
+                    text-shadow: 0 0 5px white;
+
+                    transform: translate(4%, -70%);
+                }
+
+                & div {
+                    z-index: 0;
+                    width: 20rem;
+                    height: 4rem;
+                    margin: 0;
+                    padding: 0;
+
+                    font-size: 4rem;
+
+                    backdrop-filter: invert(100%);
+
+                    transform: translate(0%, 10%);
+                }
+            }
+
+            &:active {
+
+                & h1 {
+                    font-size: 2.5rem;
+                    letter-spacing: 5px;
+
+                    color: #000000;
+                    text-shadow: 0 0 10px #8C8177;
+
+                    transform: translate(4%, -70%);
+                }
+
+                & div {
+                    z-index: 1;
+                    width: 12rem;
+                    height: 4rem;
+                    margin: 0;
+                    padding: 0;
+
+                    font-size: 4rem;
+
+                    backdrop-filter: invert(100%);
+
+                    transform: translate(18%, 10%);
+                }
+            }
         }
     }
+
     & .footRight {
         width: 50%;
         height: 30rem;
         padding: 1rem;
-        border: solid red;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // border: solid red;
+        background-image: linear-gradient(to bottom,
+                transparent 0%,
+                #2d2d2d 70%,
+                #262626 80%,
+                #1f1f1f 90%,
+                #0c0c18 100%);
+
+        & div {
+            z-index: 0;
+            height: 80%;
+            width: 1px;
+            background: linear-gradient(#403D3C, transparent);
+            // border-left: solid 1px #403D3C;
+        }
     }
 }

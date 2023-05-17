@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import "./App.scss";
 import gsap from "gsap";
 import Navbar from "./Component/Navbar/Navbar";
-import Footer from "./Component/Footer/footer";
+
 import Home from "./Component/Home/Home";
+import Footer from "./Component/Footer/Footer";
 
 function App() {
   document.addEventListener("mousemove", (ev) => {
@@ -22,7 +23,9 @@ function App() {
     <div className="App">
       <div id="cursor-follow"></div>
       <div className="tree"></div>
-      <div className="line"></div>
+      <div className="line">
+        <img src="bushido.png" alt="" />
+      </div>
 
       <Navbar />
 

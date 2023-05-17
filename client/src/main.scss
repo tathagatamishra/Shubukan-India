@@ -14,9 +14,14 @@
 html,
 body {
   margin: 0px;
-  }
-  
-  body {
+  background: rgb(232, 222, 204);
+  background-image: linear-gradient(to bottom,
+  rgb(232, 222, 204) 0%,
+  rgb(232, 222, 204) 90%,
+  #0c0c18 91%);
+}
+
+body {
 
   &::-webkit-scrollbar {
     width: 5px;
@@ -26,7 +31,6 @@ body {
 
   &::-webkit-scrollbar-thumb {
     background: black;
-    // border-radius: 50px;
     border-top: solid 10px tomato;
     border-bottom: solid 10px tomato;
   }

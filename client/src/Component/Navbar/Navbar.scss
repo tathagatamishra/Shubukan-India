@@ -3,7 +3,6 @@
 
     height: 10rem;
     width: 100%;
-    // padding: 1rem;
     position: fixed;
     top: 0rem;
 
@@ -12,10 +11,7 @@
     align-items: flex-start;
     justify-content: space-between;
 
-    // border: solid;
     background-image: linear-gradient(white, white, transparent);
-    // box-shadow: 0 0 15px black;
-    // border-bottom: solid 5px rgb(189, 189, 189);
 
     transition: 0.5s;
 
@@ -29,7 +25,6 @@
         // border: solid red;
 
         & canvas {
-            // height: 100% !important;
             height: 5rem !important;
             width: 5rem !important;
             display: block;
@@ -51,8 +46,6 @@
         align-items: center;
         justify-content: space-around;
 
-        // border: solid red;
-
         & .menuDiv {
             height: 100%;
             width: fit-content;
@@ -62,8 +55,6 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            // margin-right: .5rem;
-            // border: solid;
 
             & p {
                 padding: 0;
@@ -90,7 +81,6 @@
             }
 
             & div {
-                // border: solid blue;
                 padding: 0;
                 margin: 0;
                 height: 0;

@@ -5,26 +5,31 @@
   display: flex;
   flex-direction: column;
 
+
   & .tree {
     z-index: 1;
     height: 500px;
     width: 500px;
-    
+
     top: 0%;
     right: 0%;
     position: absolute;
-    
+
     background-image: url("tree.png");
     background-size: 500px 500px;
     transform: scaleX(-1)
   }
-  
+
   & .line {
     z-index: 0;
     height: 45rem;
-    right: 20%;
+    right: 15%;
     position: absolute;
     border-left: solid #A69485;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 
     animation-name: anim;
     animation-duration: 10s;
@@ -40,6 +45,27 @@
       }
     }
 
+    & img {
+      height: 100px;
+      margin: 3rem .4rem;
+      filter: opacity(60%);
+      
+      animation-name: bushi;
+      animation-duration: 10s;
+      animation-timing-function: ease-in-out;
+      
+      @keyframes bushi {
+        from {
+          filter: opacity(0%);
+          transform: translateY(-50%);
+        }
+        
+        to {
+          filter: opacity(60%);
+          transform: translateY(0%);
+        }
+      }
+    }
   }
 
   & .webBody {
@@ -51,7 +77,6 @@
     justify-content: center;
     align-items: center;
 
-    background: wheat;
     background-image: url("paper.jpg");
     background-size: 250px 250px;
   }
@@ -70,20 +95,4 @@
     backdrop-filter: saturate(1) invert(100%) hue-rotate(90deg);
     z-index: 100;
   }
-
-
-  // & #noise {
-  //   position: fixed;
-  //   top: 0;
-  //   left: 0;
-  //   height: 100dvh;
-  //   width: 100%;
-  //   background-image: url("NoiseTexture.png");
-  //   background-position: center;
-  //   background-repeat: repeat;
-  //   background-size: cover;
-  //   mix-blend-mode: color-burn;
-  //   opacity: 0.5;
-  //   z-index: -1;
-  // }
 }
