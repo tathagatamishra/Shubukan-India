@@ -23,6 +23,7 @@ function App() {
     <div className="App">
       <div id="cursor-follow"></div>
       <div className="tree"></div>
+      <div className="bird"></div>
       <div className="line">
         <img src="bushido.png" alt="" />
       </div>
