@@ -317,15 +317,17 @@
 
             display: block;
             overflow: hidden;
-            box-shadow: 0 0 10px #544e485f;
+            box-shadow: 0 0 10px #ebe1d6df;
             border-radius: 8px;
             transition: 300ms;
-
+            border-top: solid 1.5px transparent;
+            border-left: solid 1.5px transparent;
+            
             & img {
                 height: auto;
                 width: 100%;
                 border-radius: 8px;
-                filter: sepia(50%) grayscale(50%);
+                filter: sepia(30%) grayscale(30%);
                 
                 display: block;
                 background-size: cover;
@@ -334,6 +336,10 @@
             
             &:hover {
                 border-radius: 2px;
+                box-shadow: 5px 5px 0px #F2E9E9;
+                border-top: solid 1.5px #403D3C;
+                border-left: solid 1.5px #403D3C;
+
                 & img {
                     transform: scale(1.05, 1.05);
                 }

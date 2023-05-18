@@ -46,6 +46,8 @@
         align-items: center;
         justify-content: space-around;
 
+        cursor: none;
+
         & .menuDiv {
             height: 100%;
             width: fit-content;
@@ -83,7 +85,7 @@
             & div {
                 padding: 0;
                 margin: 0;
-                height: 0;
+                height: 0px;
                 transition: 300ms;
                 width: 0;
             }
@@ -99,7 +101,8 @@
                 }
 
                 & div {
-                    border-bottom: solid #A64B37;
+                    height: 2px;
+                    background: radial-gradient(circle, #A64B37 0%, transparent 100%);
                     transition: 300ms;
                     width: 100%;
                     transform: translateY(-2px);
