@@ -29,7 +29,7 @@ export default function Navbar() {
   return (
     <div id="Navbar" style={position}>
       <section className="logo">
-        <Spline scene="https://prod.spline.design/IRCi38KJr6aI3aIN/scene.splinecode" />
+      <Spline scene="https://prod.spline.design/IRCi38KJr6aI3aIN/scene.splinecode" />
         <img src="logo.png" />
       </section>
       <nav className="options">
