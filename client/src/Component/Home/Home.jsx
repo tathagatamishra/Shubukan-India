@@ -12,6 +12,7 @@ export default function Home() {
         <p>
           there is a diviner instinct to love <i>&nbsp;</i>
         </p>
+        <div className="bird"></div>
       </section>
 
       <section className="intro">
@@ -91,8 +92,76 @@ export default function Home() {
           strength to concentrate your spirit on one thing with heart and soul.
         </p>
         <h1>Blog</h1>
-        <div className="row1">Coming soon ...</div>
-        <div className="row2"></div>
+        <div className="row1">
+          <div className="leftBar"></div>
+          <div className="marquee">
+            <section className="marquee__group">
+              <div className="singleBlog">
+                <img src="blog1.jpg" alt="" />
+              </div>
+              <div className="singleBlog">
+                <img src="blog2.jpg" alt="" />
+              </div>
+              <div className="singleBlog">
+                <img src="blog1.jpg" alt="" />
+              </div>
+              <div className="singleBlog">
+                <img src="blog2.jpg" alt="" />
+              </div>
+            </section>
+
+            <section aria-hidden="true" className="marquee__group">
+              <div className="singleBlog">
+                <img src="blog1.jpg" alt="" />
+              </div>
+              <div className="singleBlog">
+                <img src="blog2.jpg" alt="" />
+              </div>
+              <div className="singleBlog">
+                <img src="blog1.jpg" alt="" />
+              </div>
+              <div className="singleBlog">
+                <img src="blog2.jpg" alt="" />
+              </div>
+            </section>
+          </div>
+          <div className="rightBar"></div>
+        </div>
+        <div className="row2">
+          <div className="leftBar"></div>
+          <div className="marquee marquee--reverse">
+            <section className="marquee__group">
+            <div className="singleBlog">
+                <img src="blog3.png" alt="" />
+              </div>
+              <div className="singleBlog">
+                <img src="blog4.png" alt="" />
+              </div>
+              <div className="singleBlog">
+                <img src="blog5.png" alt="" />
+              </div>
+              <div className="singleBlog">
+                <img src="blog6.png" alt="" />
+              </div>
+            </section>
+
+            <section aria-hidden="true" className="marquee__group">
+            <div className="singleBlog">
+                <img src="blog3.png" alt="" />
+              </div>
+              <div className="singleBlog">
+                <img src="blog4.png" alt="" />
+              </div>
+              <div className="singleBlog">
+                <img src="blog5.png" alt="" />
+              </div>
+              <div className="singleBlog">
+                <img src="blog6.png" alt="" />
+              </div>
+            </section>
+          </div>
+          <div className="rightBar"></div>
+        </div>
         <p>
           Empty-handed and carrying no weapon, dominating an adversary with body
           and soul only, karate, a martial art of self-defense. To master the

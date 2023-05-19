@@ -4,6 +4,7 @@
     width: 80%;
     display: flex;
     flex-direction: column;
+    position: relative;
 
     & .hero {
         width: 100%;
@@ -76,6 +77,35 @@
                 background: #D9C8A9;
             }
         }
+
+        & .bird {
+            z-index: 1;
+            height: 250px;
+            width: 250px;
+        
+            // top: 11%;
+            // left: -10%;
+            position: absolute;
+        
+            background-image: url("https://overcurious-documen.000webhostapp.com/images/bird.png");
+            background-size: 250px 250px;
+            filter: sepia(20%) opacity(80%);
+            transform: scaleX(-1) translate(25%, 150%);
+        
+            animation-name: fly;
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+        
+            @keyframes fly {
+              from {
+                transform: scaleX(-1) translate(55%, 180%);
+              }
+        
+              to {
+                transform: scaleX(-1) translate(25%, 150%);
+              }
+            }
+          }
     }
 
     & .intro {
@@ -322,18 +352,18 @@
             transition: 300ms;
             border-top: solid 1.5px transparent;
             border-left: solid 1.5px transparent;
-            
+
             & img {
                 height: auto;
                 width: 100%;
                 border-radius: 8px;
                 filter: sepia(30%) grayscale(30%);
-                
+
                 display: block;
                 background-size: cover;
                 transition: transform 0.4s;
             }
-            
+
             &:hover {
                 border-radius: 2px;
                 box-shadow: 5px 5px 0px #F2E9E9;
@@ -368,15 +398,13 @@
 
     & .blog {
         width: 100%;
-        height: 65rem;
+        height: 90rem;
         margin-top: 5rem;
 
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-
-        // border: solid #A69485;
 
         & .blogLine {
             width: 80%;
@@ -410,6 +438,7 @@
         }
 
         & p {
+            margin-bottom: 5rem;
             color: #4b423b;
             font-size: 1.5rem;
             font-family: 'Amarante', cursive;
@@ -424,22 +453,207 @@
 
             &:last-child {
                 margin-top: 4rem;
+                margin-bottom: 0;
                 text-align: right;
             }
         }
 
         & .row1 {
-            margin: 1rem 0;
-            height: 15rem;
+            margin: 1rem 0 3rem;
+            height: 28rem;
             width: 100%;
-            border: solid #A69485;
 
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+
+            .leftBar {
+                z-index: 1;
+                width: 5rem;
+                height: 28rem;
+                position: absolute;
+                left: 0;
+                background-image: linear-gradient(to right, rgb(231, 221, 211), transparent);
+            }
+
+            .rightBar {
+                z-index: 1;
+                width: 5rem;
+                height: 28rem;
+                position: absolute;
+                right: 0;
+                background-image: linear-gradient(to left, rgb(231, 221, 211), transparent);
+            }
+
+            .marquee {
+                display: flex;
+                overflow: hidden;
+                user-select: none;
+                gap: var(--gap);
+            }
+
+            .marquee__group {
+                flex-shrink: 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                gap: var(--gap);
+                min-width: 100%;
+                animation: scroll-x var(--duration) linear infinite;
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                .marquee__group {
+                    animation-play-state: paused;
+                }
+            }
+
+            @keyframes scroll-x {
+                from {
+                    transform: translateX(var(--scroll-start));
+                }
+
+                to {
+                    transform: translateX(var(--scroll-end));
+                }
+            }
+
+            .singleBlog {
+                display: grid;
+                place-items: center;
+                width: var(--size);
+                // fill: var(--color-text);
+                background: #a28d88;
+                aspect-ratio: 16/9;
+                padding: calc(var(--size) / 10);
+                border-radius: 0.5rem;
+
+                & img {
+                    height: auto;
+                    width: 100%;
+                    border-radius: 8px;
+                    filter: sepia(30%) grayscale(30%);
+                    
+                    display: block;
+                    background-size: cover;
+                    transition: transform 0.4s;
+                }
+    
+                &:hover {
+    
+                    & img {
+                        transform: scale(1.05, 1.05);
+                    }
+                }
+            }
         }
 
         & .row2 {
-            height: 15rem;
+            height: fit-content;
             width: 100%;
-            border: solid #A69485;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+
+            .leftBar {
+                z-index: 1;
+                width: 5rem;
+                height: 28rem;
+                position: absolute;
+                left: 0;
+                background-image: linear-gradient(to right, rgb(231, 221, 211), transparent);
+            }
+
+            .rightBar {
+                z-index: 1;
+                width: 5rem;
+                height: 28rem;
+                position: absolute;
+                right: 0;
+                background-image: linear-gradient(to left, rgb(231, 221, 211), transparent);
+            }
+
+            .marquee {
+                display: flex;
+                overflow: hidden;
+                user-select: none;
+                gap: var(--gap);
+            }
+
+            .marquee__group {
+                flex-shrink: 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                gap: var(--gap);
+                min-width: 100%;
+                animation: scroll-x var(--duration) linear infinite;
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                .marquee__group {
+                    animation-play-state: paused;
+                }
+            }
+
+            .marquee--reverse .marquee__group {
+                animation-direction: reverse;
+                animation-delay: -3s;
+            }
+
+            @keyframes scroll-x {
+                from {
+                    transform: translateX(var(--scroll-start));
+                }
+
+                to {
+                    transform: translateX(var(--scroll-end));
+                }
+            }
+
+            .singleBlog {
+                display: grid;
+                place-items: center;
+                width: var(--size);
+                // height: 100%;
+                fill: var(--color-text);
+                background: #c6b6aa;
+                aspect-ratio: 16/9;
+                padding: calc(var(--size) / 10);
+                border-radius: 0.5rem;
+
+                & img {
+                    height: auto;
+                    width: 90%;
+                    border-radius: 8px;
+                    filter: sepia(30%) grayscale(30%);
+                    
+                    display: block;
+                    background-size: cover;
+                    transition: transform 0.4s;
+                }
+    
+                &:hover {
+    
+                    & img {
+                        transform: scale(1.05, 1.05);
+                    }
+                }
+            }
         }
     }
+}
+
+:root {
+    --color-text: navy;
+    --color-bg: papayawhip;
+    --color-bg-accent: #ecdcc0;
+    --size: 35rem;
+    --gap: calc(var(--size) / 14);
+    --duration: 60s;
+    --scroll-start: 0;
+    --scroll-end: calc(-100% - var(--gap));
 }
