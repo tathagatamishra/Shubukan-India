@@ -3,32 +3,45 @@ import "./Footer.scss";
 
 export default function Footer() {
   function news(event) {
-    event.preventDefault()
+    event.preventDefault();
   }
 
   return (
     <div className="Footer">
-      <section className="footLeft">
-        <div className="newsLetter">
-          <h1>Subscribe to our newsletter</h1>
+      <div className="upperFoot">
+        <section className="footLeft">
+          <div className="newsLetter">
+            <h1>Subscribe to our newsletter</h1>
 
-          <form action="">
-            <input type="email" />
-            <button onClick={news}>&#10230;</button>
-          </form>
+            <form action="">
+              <input type="email" />
+              <button onClick={news}>&#10230;</button>
+            </form>
 
+            <div></div>
+          </div>
+
+          <div className="contactUs">
+            <div></div>
+            <h1>Connect with us</h1>
+          </div>
+        </section>
+        <div className="midLine"></div>
+        <section className="footRight">
           <div></div>
+        </section>
+      </div>
+      <div className="lowerFoot">
+        <div className="logoImg">
+          <img src="shubukanIndia.png" alt="" />
         </div>
-
-        <div className="contactUs">
-          <div></div>
-          <h1>Connect with us</h1>
+        <div className="logoImg">
+          <img src="Shorin-ryu.png" alt="" />
         </div>
-      </section>
-
-      <section className="footRight">
-        <div></div>
-      </section>
+        <div className="logoImg">
+          <img src="wbk.png" alt="" />
+        </div>
+      </div>
     </div>
   );
 }
