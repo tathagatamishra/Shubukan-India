@@ -79,33 +79,37 @@
         }
 
         & .bird {
+            & img {
+                width: 100%;
+            }
+
             z-index: 1;
             height: 250px;
             width: 250px;
-        
+
             // top: 11%;
             // left: -10%;
             position: absolute;
-        
-            background-image: url("https://overcurious-documen.000webhostapp.com/images/bird.png");
-            background-size: 250px 250px;
+
+            // background-image: url("https://overcurious-documen.000webhostapp.com/images/bird.png");
+            // background-size: 250px 250px;
             filter: sepia(20%) opacity(80%);
             transform: scaleX(-1) translate(25%, 150%);
-        
+
             animation-name: fly;
             animation-duration: 5s;
             animation-timing-function: ease-in-out;
-        
+
             @keyframes fly {
-              from {
-                transform: scaleX(-1) translate(55%, 180%);
-              }
-        
-              to {
-                transform: scaleX(-1) translate(25%, 150%);
-              }
+                from {
+                    transform: scaleX(-1) translate(55%, 180%);
+                }
+
+                to {
+                    transform: scaleX(-1) translate(25%, 150%);
+                }
             }
-          }
+        }
     }
 
     & .intro {
@@ -534,14 +538,14 @@
                     width: 100%;
                     border-radius: 8px;
                     filter: sepia(30%) grayscale(30%);
-                    
+
                     display: block;
                     background-size: cover;
                     transition: transform 0.4s;
                 }
-    
+
                 &:hover {
-    
+
                     & img {
                         transform: scale(1.05, 1.05);
                     }
@@ -630,14 +634,14 @@
                     width: 90%;
                     border-radius: 8px;
                     filter: sepia(30%) grayscale(30%);
-                    
+
                     display: block;
                     background-size: cover;
                     transition: transform 0.4s;
                 }
-    
+
                 &:hover {
-    
+
                     & img {
                         transform: scale(1.05, 1.05);
                     }

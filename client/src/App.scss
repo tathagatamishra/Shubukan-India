@@ -1,12 +1,17 @@
 .App {
   height: 100vh;
   box-sizing: border-box;
+  // position: relative;
 
   display: flex;
   flex-direction: column;
 
-
   & .tree {
+
+    & img {
+      width: 100%;
+    }
+
     z-index: 1;
     height: 500px;
     width: 500px;
@@ -15,8 +20,8 @@
     right: 0%;
     position: absolute;
 
-    background-image: url("https://overcurious-documen.000webhostapp.com/images/tree.png");
-    background-size: 500px 500px;
+    // background-image: url("https://overcurious-documen.000webhostapp.com/images/tree.png");
+    // background-size: 500px 500px;
     filter: opacity(80%);
     transform: scaleX(-1)
   }

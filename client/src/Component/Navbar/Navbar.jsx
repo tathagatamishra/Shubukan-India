@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import $ from "jquery";
 import Spline from "@splinetool/react-spline";
 import "./Navbar.scss";
 

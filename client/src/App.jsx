@@ -22,7 +22,9 @@ function App() {
   return (
     <div className="App">
       <div id="cursor-follow"></div>
-      <div className="tree"></div>
+      <div className="tree">
+        <img src="tree.png" alt="" />
+      </div>
       <div className="line">
         <img src="bushido.png" alt="" />
       </div>

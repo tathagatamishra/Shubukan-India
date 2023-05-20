@@ -12,7 +12,9 @@ export default function Home() {
         <p>
           there is a diviner instinct to love <i>&nbsp;</i>
         </p>
-        <div className="bird"></div>
+        <div className="bird">
+          <img src="bird.png" alt="" />
+        </div>
       </section>
 
       <section className="intro">
