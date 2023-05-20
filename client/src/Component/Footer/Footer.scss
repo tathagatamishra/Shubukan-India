@@ -5,13 +5,16 @@
 
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 
     background-image: url("https://www.tilingtextures.com/wp-content/uploads/2018/11/0068-1-768x768.jpg");
-    box-shadow: inset 0px -700px 1000px -200px #ffffff;
+    box-shadow: inset 0px -800px 200px -200px #ffffff;
     background-size: 250px 250px;
     // border: solid;
 
     & .upperFoot {
+        width: 80%;
         display: flex;
         flex-direction: row;
 
@@ -25,239 +28,230 @@
             flex-direction: column;
             justify-content: flex-start;
 
-            // background-image: linear-gradient(to bottom,
-            //         transparent 0%,
-            //         #2d2d2d 70%,
-            //         #262626 80%,
-            //         #1f1f1f 90%,
-            //         #0c0c18 100%);
+            & .newsLetter {
+                // height: 50%;
+                margin-top: 8rem;
+                // border: solid yellow;
+                transition: 200ms;
 
-            // border: solid red;
+                & h1 {
+                    margin: 0 0 1rem 0;
+                    // border: solid yellow;
+                    color: #686060;
+                    font-size: 2rem;
+                    line-height: 2.5rem;
+                    // font-family: 'Amarante', cursive;
+                    // font-family: 'Andika', sans-serif;
+                    // font-family: 'Bellefair', serif;
+                    // font-family: 'Capriola', sans-serif;
+                    // font-family: 'Flamenco', cursive;
+                    font-family: 'Forum', cursive;
+                    // font-family: 'Fredericka the Great', cursive;
+                    // font-family: 'GFS Neohellenic', sans-serif;
+                    // font-family: 'Philosopher', sans-serif;
+                    // font-family: 'Pompiere', cursive;
+                    // font-family: 'Tenali Ramakrishna', sans-serif;
+                    transform: translateY(40%);
+                    user-select: none;
+                    transition: 200ms;
+                }
 
-            // & .newsLetter {
-            //     // height: 50%;
-            //     margin-top: 8rem;
-            //     // border: solid yellow;
-            //     transition: 200ms;
+                & form {
+                    width: fit-content;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
 
-            //     & h1 {
-            //         margin: 0 0 1rem 0;
-            //         // border: solid yellow;
-            //         color: #2b2828;
-            //         font-size: 2.5rem;
-            //         line-height: 2.5rem;
-            //         // font-family: 'Amarante', cursive;
-            //         // font-family: 'Andika', sans-serif;
-            //         // font-family: 'Bellefair', serif;
-            //         // font-family: 'Capriola', sans-serif;
-            //         // font-family: 'Flamenco', cursive;
-            //         font-family: 'Forum', cursive;
-            //         // font-family: 'Fredericka the Great', cursive;
-            //         // font-family: 'GFS Neohellenic', sans-serif;
-            //         // font-family: 'Philosopher', sans-serif;
-            //         // font-family: 'Pompiere', cursive;
-            //         // font-family: 'Tenali Ramakrishna', sans-serif;
-            //         transform: translateY(40%);
-            //         user-select: none;
-            //         transition: 200ms;
-            //     }
+                    & input {
+                        width: 20rem;
+                        height: 4rem;
+                        padding: 1rem 0 0 0;
+                        background: transparent;
+                        border: none;
+                        // border: solid;
 
-            //     & form {
-            //         width: fit-content;
-            //         display: flex;
-            //         flex-direction: row;
-            //         justify-content: flex-start;
+                        color: #605a5a;
+                        font-size: 1.5rem;
+                        // font-family: 'Amarante', cursive;
+                        // font-family: 'Andika', sans-serif;
+                        // font-family: 'Bellefair', serif;
+                        // font-family: 'Capriola', sans-serif;
+                        // font-family: 'Flamenco', cursive;
+                        // font-family: 'Fredericka the Great', cursive;
+                        // font-family: 'GFS Neohellenic', sans-serif;
+                        // font-family: 'Pompiere', cursive;
+                        font-family: 'Tenali Ramakrishna', sans-serif;
 
-            //         & input {
-            //             width: 20rem;
-            //             height: 4rem;
-            //             padding: 1rem 0 0 0;
-            //             background: transparent;
-            //             border: none;
-            //             // border: solid;
+                        &:focus {
+                            outline: none;
+                        }
 
-            //             color: #dfd5d5;
-            //             font-size: 1.5rem;
-            //             // font-family: 'Amarante', cursive;
-            //             // font-family: 'Andika', sans-serif;
-            //             // font-family: 'Bellefair', serif;
-            //             // font-family: 'Capriola', sans-serif;
-            //             // font-family: 'Flamenco', cursive;
-            //             // font-family: 'Fredericka the Great', cursive;
-            //             // font-family: 'GFS Neohellenic', sans-serif;
-            //             // font-family: 'Pompiere', cursive;
-            //             font-family: 'Tenali Ramakrishna', sans-serif;
+                        &::selection {
+                            color: #ffffff;
+                            background: #858E78;
+                        }
+                    }
 
-            //             &:focus {
-            //                 outline: none;
-            //             }
+                    & button {
+                        border-radius: 50px;
+                        height: 5rem;
+                        width: 5rem;
+                        font-size: 2.5rem;
+                        // transform: rotate(-10deg);
+                        color:  #565250;
+                        background: #bcb3b3;
+                        border: 4px solid #777270;
+                        transition: 200ms;
+                        
+                        &:hover {
+                            border: 4px solid #D9C8A9;
+                            padding: 0 0 0 2.8rem;
+                            transform: translateX(-10%);
+                        }
+                        
+                        &:active {
+                            border: 4px solid #777270;
+                            padding: 0 0 0 2rem;
+                            transform: translateX(0%);
+                        }
+                    }
+                }
 
-            //             &::selection {
-            //                 color: #212121;
-            //                 background: #858E78;
-            //             }
-            //         }
+                & div {
+                    border-bottom: solid 2px #5f443f;
+                    width: 20rem;
+                    height: 0;
+                    transform: translate(20%, -500%);
+                    transition: 200ms;
+                }
 
-            //         & button {
-            //             border-radius: 50px;
-            //             height: 5rem;
-            //             width: 5rem;
-            //             font-size: 2.5rem;
-            //             // transform: rotate(-10deg);
-            //             color: #F2E9E9;
-            //             background: #403D3C;
-            //             border: 2px solid #BFB2AA;
-            //             transition: 200ms;
+                &:hover {
+                    transition: 200ms;
 
-            //             &:hover {
-            //                 padding: 0 0 0 2.8rem;
-            //                 transform: translateX(-10%);
-            //             }
+                    & h1 {
+                        text-shadow: 0 0 10px #b8aa8fa7;
+                    }
 
-            //             &:active {
-            //                 padding: 0 0 0 2rem;
-            //                 transform: translateX(0%);
-            //             }
-            //         }
-            //     }
+                    & div {
+                        border-bottom: solid 2px #D9C8A9;
+                        width: 20rem;
+                        height: 0;
+                        transform: translate(0%, -500%);
+                    }
+                }
+            }
 
-            //     & div {
-            //         border-bottom: solid 2px #5f443f;
-            //         width: 20rem;
-            //         height: 0;
-            //         transform: translate(20%, -500%);
-            //         transition: 200ms;
-            //     }
+            & .contactUs {
+                height: fit-content;
+                margin-top: 5rem;
 
-            //     &:hover {
-            //         transition: 200ms;
+                display: flex;
+                flex-direction: column;
+                // align-items: center;
+                // border: solid yellow;
 
-            //         & h1 {
-            //             text-shadow: 0 0 10px #b8aa8fa7;
-            //         }
+                & h1 {
+                    z-index: 0;
+                    margin: 0;
+                    padding: 0;
+                    width: fit-content;
 
-            //         & div {
-            //             border-bottom: solid 2px #D9C8A9;
-            //             width: 20rem;
-            //             height: 0;
-            //             transform: translate(0%, -500%);
-            //         }
-            //     }
-            // }
+                    font-size: 2.5rem;
+                    letter-spacing: 4px;
+                    line-height: 2.3rem;
+                    // font-family: 'Amarante', cursive;
+                    // font-family: 'Andika', sans-serif;
+                    // font-family: 'Bellefair', serif;
+                    // font-family: 'Capriola', sans-serif;
+                    // font-family: 'Flamenco', cursive;
+                    font-family: 'Forum', cursive;
+                    // font-family: 'Fredericka the Great', cursive;
+                    // font-family: 'GFS Neohellenic', sans-serif;
+                    // font-family: 'Philosopher', sans-serif;
+                    // font-family: 'Pompiere', cursive;
+                    // font-family: 'Tenali Ramakrishna', sans-serif;
 
-            // & .contactUs {
-            //     height: fit-content;
-            //     margin-top: 5rem;
+                    color: #D2D9D3;
+                    text-shadow: 2px 2px 0px black;
+                    user-select: none;
 
-            //     display: flex;
-            //     flex-direction: column;
-            //     // align-items: center;
-            //     // border: solid yellow;
+                    transform: translate(10%, 0%);
+                    transition: 200ms;
+                }
 
-            //     & h1 {
-            //         z-index: 0;
-            //         margin: 0;
-            //         padding: 0;
-            //         width: fit-content;
+                & div {
+                    z-index: 1;
+                    width: 12rem;
+                    height: .5rem;
+                    margin: 0;
+                    padding: 0;
 
-            //         font-size: 2.5rem;
-            //         letter-spacing: 4px;
-            //         line-height: 2.3rem;
-            //         // font-family: 'Amarante', cursive;
-            //         // font-family: 'Andika', sans-serif;
-            //         // font-family: 'Bellefair', serif;
-            //         // font-family: 'Capriola', sans-serif;
-            //         // font-family: 'Flamenco', cursive;
-            //         font-family: 'Forum', cursive;
-            //         // font-family: 'Fredericka the Great', cursive;
-            //         // font-family: 'GFS Neohellenic', sans-serif;
-            //         // font-family: 'Philosopher', sans-serif;
-            //         // font-family: 'Pompiere', cursive;
-            //         // font-family: 'Tenali Ramakrishna', sans-serif;
+                    font-size: 4rem;
+                    // border: solid;
+                    backdrop-filter: invert(100%);
 
-            //         color: #D2D9D3;
-            //         text-shadow: 2px 2px 0px black;
-            //         user-select: none;
+                    transform: translate(0%, 0%);
+                    transition: 200ms;
+                }
 
-            //         transform: translate(10%, 0%);
-            //         transition: 200ms;
-            //     }
+                &:hover {
 
-            //     & div {
-            //         z-index: 1;
-            //         width: 12rem;
-            //         height: .5rem;
-            //         margin: 0;
-            //         padding: 0;
+                    & h1 {
+                        font-size: 2.5rem;
+                        letter-spacing: 10px;
 
-            //         font-size: 4rem;
-            //         // border: solid;
-            //         backdrop-filter: invert(100%);
+                        color: #ffffff;
+                        text-shadow: 0 0 5px white;
 
-            //         transform: translate(0%, 0%);
-            //         transition: 200ms;
-            //     }
+                        transform: translate(4%, -70%);
+                    }
 
-            //     &:hover {
+                    & div {
+                        z-index: 1;
+                        width: 20rem;
+                        height: 4rem;
+                        margin: 0;
+                        padding: 0;
 
-            //         & h1 {
-            //             font-size: 2.5rem;
-            //             letter-spacing: 10px;
+                        font-size: 4rem;
 
-            //             color: #ffffff;
-            //             text-shadow: 0 0 5px white;
+                        backdrop-filter: invert(100%);
 
-            //             transform: translate(4%, -70%);
-            //         }
+                        transform: translate(0%, 10%);
+                    }
+                }
 
-            //         & div {
-            //             z-index: 1;
-            //             width: 20rem;
-            //             height: 4rem;
-            //             margin: 0;
-            //             padding: 0;
+                &:active {
 
-            //             font-size: 4rem;
+                    & h1 {
+                        font-size: 2.5rem;
+                        letter-spacing: 5px;
 
-            //             backdrop-filter: invert(100%);
+                        color: #000000;
+                        text-shadow: 0 0 10px #ffffff;
 
-            //             transform: translate(0%, 10%);
-            //         }
-            //     }
+                        transform: translate(4%, -70%);
+                    }
 
-            //     &:active {
+                    & div {
+                        z-index: 1;
+                        width: 12rem;
+                        height: 4rem;
+                        margin: 0;
+                        padding: 0;
 
-            //         & h1 {
-            //             font-size: 2.5rem;
-            //             letter-spacing: 5px;
+                        font-size: 4rem;
 
-            //             color: #000000;
-            //             text-shadow: 0 0 10px #ffffff;
+                        backdrop-filter: invert(100%);
 
-            //             transform: translate(4%, -70%);
-            //         }
-
-            //         & div {
-            //             z-index: 1;
-            //             width: 12rem;
-            //             height: 4rem;
-            //             margin: 0;
-            //             padding: 0;
-
-            //             font-size: 4rem;
-
-            //             backdrop-filter: invert(100%);
-
-            //             transform: translate(18%, 10%);
-            //         }
-            //     }
-            // }
+                        transform: translate(18%, 10%);
+                    }
+                }
+            }
         }
 
         & .midLine {
-            z-index: 0;
-            height: 80%;
-            // margin: 1rem 0;
+            height: 100%;
             width: 1px;
             background: linear-gradient(#403D3C, transparent);
         }
@@ -281,12 +275,13 @@
 
     & .lowerFoot {
         height: fit-content;
+        // margin-bottom: 2rem;
 
         display: flex;
         flex-direction: row;
         justify-content: center;
 
-        border: solid blue;
+        // border: solid blue;
 
         & .logoImg {
             width: fit-content;
@@ -304,6 +299,27 @@
                 display: block;
                 background-size: cover;
             }
+        }
+    }
+
+    & .footLine {
+        height: 1px;
+        width: 100%;
+        margin: 1rem 0;
+        background: radial-gradient(circle, transparent 20%, rgba(64, 61, 60, 0.5) 100%);
+    }
+
+    & .footExtra {
+        width: 100%;
+        // padding: 0 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        & p {
+            margin: 0 1rem 1rem;
+            font-size: .8rem;
+            font-family: Arial, Helvetica, sans-serif;
         }
     }
 }

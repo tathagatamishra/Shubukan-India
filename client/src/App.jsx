@@ -34,8 +34,7 @@ function App() {
       <div className="webBody">
         <Home />
       </div>
-
-      <Footer />
+        <Footer />
     </div>
   );
 }

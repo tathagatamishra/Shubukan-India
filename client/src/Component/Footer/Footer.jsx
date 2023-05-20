@@ -42,6 +42,11 @@ export default function Footer() {
           <img src="wbk.png" alt="" />
         </div>
       </div>
+      <div className="footLine"></div>
+      <div className="footExtra">
+        <p>© 2023 Shubokan India</p>
+        <p>Terms & Conditions</p>
+      </div>
     </div>
   );
 }
