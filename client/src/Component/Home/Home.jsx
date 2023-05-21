@@ -7,32 +7,51 @@ export default function Home() {
   const [startX, setStartX] = useState(null);
   const [scrollLeft, setScrollLeft] = useState(null);
 
-useEffect(()=>{setSlider(document.querySelector(".items"))},[])
+  useEffect(() => {
+    const sliderElement = document.querySelector(".marquee");
+    setSlider(sliderElement);
 
-  if(slider){slider.addEventListener("mousedown", (e) => {
-    setIsDown(true);
-    slider.classList.add("active");
-    setStartX(e.pageX - slider.offsetLeft);
-    setScrollLeft(slider.scrollLeft);
-  });
+    const handleMouseDown = (e) => {
+      setIsDown(true);
+      sliderElement.classList.add("active");
+      setStartX(e.pageX - sliderElement.offsetLeft);
+      setScrollLeft(sliderElement.scrollLeft);
+    };
 
-  slider.addEventListener("mouseleave", () => {
-    setIsDown(false);
-    slider.classList.remove("active");
-  });
+    const handleMouseLeave = () => {
+      setIsDown(false);
+      sliderElement.classList.remove("active");
+    };
 
-  slider.addEventListener("mouseup", () => {
-    setIsDown(false);
-    slider.classList.remove("active");
-  });
-  
-  slider.addEventListener("mousemove", (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 3; //scroll-fast
-    slider.scrollLeft = scrollLeft - walk;
-  });}
+    const handleMouseUp = () => {
+      setIsDown(false);
+      sliderElement.classList.remove("active");
+    };
+
+    const handleMouseMove = (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - sliderElement.offsetLeft;
+      const walk = (x - startX) * 3; //scroll-fast
+      sliderElement.scrollLeft = scrollLeft - walk;
+    };
+
+    if (sliderElement) {
+      sliderElement.addEventListener("mousedown", handleMouseDown);
+      sliderElement.addEventListener("mouseleave", handleMouseLeave);
+      sliderElement.addEventListener("mouseup", handleMouseUp);
+      sliderElement.addEventListener("mousemove", handleMouseMove);
+    }
+
+    return () => {
+      if (sliderElement) {
+        sliderElement.removeEventListener("mousedown", handleMouseDown);
+        sliderElement.removeEventListener("mouseleave", handleMouseLeave);
+        sliderElement.removeEventListener("mouseup", handleMouseUp);
+        sliderElement.removeEventListener("mousemove", handleMouseMove);
+      }
+    };
+  }, [slider, isDown, startX, scrollLeft]);
 
   return (
     <div className="Home">
@@ -203,7 +222,7 @@ useEffect(()=>{setSlider(document.querySelector(".items"))},[])
         </p>
       </section>
 
-      <section className="gg">
+      {/* <section className="gg">
         <div className="items">
           <div className="item item1"></div>
           <div className="item item2"></div>
@@ -216,7 +235,7 @@ useEffect(()=>{setSlider(document.querySelector(".items"))},[])
           <div className="item item9"></div>
           <div className="item item10"></div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

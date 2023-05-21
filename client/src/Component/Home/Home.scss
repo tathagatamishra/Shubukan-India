@@ -521,11 +521,30 @@
                 margin: 0 2px;
                 // overflow-x: scroll;
 
+                
                 &:hover {
                     .marquee__group {
                         animation-play-state: paused;
                     }
                 }
+
+                position: relative;
+                width: 100%;
+                // overflow-x: scroll;
+                overflow-y: hidden;
+                white-space: nowrap;
+                transition: all 0.2s;
+                // transform: scale(0.98);
+                will-change: transform;
+                user-select: none;
+                cursor: pointer;
+
+                &:active {
+                    background: rgba(255,255,255,0.3);
+                    cursor: grabbing;
+                    cursor: -webkit-grabbing;
+                    // transform: scale(1);
+                  }
             }
 
             .marquee__group {
@@ -536,6 +555,8 @@
                 gap: var(--gap);
                 min-width: 100%;
                 animation: scroll-x var(--duration) linear infinite;
+                
+
             }
 
             @keyframes scroll-x {
@@ -677,45 +698,45 @@
         }
     }
 
-    & .gg {
-        background-color: lighten(skyblue, 60%);
-        grid-area: main;
-        padding: 0;
-        overflow-x: scroll;
-        overflow-y: hidden;
+    // & .gg {
+    //     background-color: lighten(skyblue, 60%);
+    //     grid-area: main;
+    //     padding: 0;
+    //     overflow-x: scroll;
+    //     overflow-y: hidden;
 
-        & .items {
-            position: relative;
-            width: 100%;
-            overflow-x: scroll;
-            overflow-y: hidden;
-            white-space: nowrap;
-            transition: all 0.2s;
-            transform: scale(0.98);
-            will-change: transform;
-            user-select: none;
-            cursor: pointer;
-          }
+    //     & .items {
+    //         position: relative;
+    //         width: 100%;
+    //         overflow-x: scroll;
+    //         overflow-y: hidden;
+    //         white-space: nowrap;
+    //         transition: all 0.2s;
+    //         // transform: scale(0.98);
+    //         will-change: transform;
+    //         user-select: none;
+    //         cursor: pointer;
+    //       }
         
-        & .items.active {
-            background: rgba(255,255,255,0.3);
-            cursor: grabbing;
-            cursor: -webkit-grabbing;
-            transform: scale(1);
-          }
+    //     & .items.active {
+    //         background: rgba(255,255,255,0.3);
+    //         cursor: grabbing;
+    //         cursor: -webkit-grabbing;
+    //         // transform: scale(1);
+    //       }
         
-        & .item {
-            display: inline-block;
-            background: skyblue;
-            min-height: 250px;
-            min-width: 400px;
-            margin: 2em 1em;
-            @media screen and (max-width: 500px) {
-              min-height: 200px;
-              min-width: 200px;
-            }
-          }
-    }
+    //     & .item {
+    //         display: inline-block;
+    //         background: skyblue;
+    //         min-height: 250px;
+    //         min-width: 400px;
+    //         margin: 2em 1em;
+    //         @media screen and (max-width: 500px) {
+    //           min-height: 200px;
+    //           min-width: 200px;
+    //         }
+    //       }
+    // }
 }
 
 :root {
