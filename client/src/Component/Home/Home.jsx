@@ -1,7 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.scss";
 
 export default function Home() {
+  const [slider, setSlider] = useState(null);
+  const [isDown, setIsDown] = useState(false);
+  const [startX, setStartX] = useState(null);
+  const [scrollLeft, setScrollLeft] = useState(null);
+
+useEffect(()=>{setSlider(document.querySelector(".items"))},[])
+
+  if(slider){slider.addEventListener("mousedown", (e) => {
+    setIsDown(true);
+    slider.classList.add("active");
+    setStartX(e.pageX - slider.offsetLeft);
+    setScrollLeft(slider.scrollLeft);
+  });
+
+  slider.addEventListener("mouseleave", () => {
+    setIsDown(false);
+    slider.classList.remove("active");
+  });
+
+  slider.addEventListener("mouseup", () => {
+    setIsDown(false);
+    slider.classList.remove("active");
+  });
+  
+  slider.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 3; //scroll-fast
+    slider.scrollLeft = scrollLeft - walk;
+  });}
+
   return (
     <div className="Home">
       <section className="hero">
@@ -133,7 +165,7 @@ export default function Home() {
           <div className="leftBar"></div>
           <div className="marquee marquee--reverse">
             <section className="marquee__group">
-            <div className="singleBlog">
+              <div className="singleBlog">
                 <img src="blog3.png" alt="" />
               </div>
               <div className="singleBlog">
@@ -148,7 +180,7 @@ export default function Home() {
             </section>
 
             <section aria-hidden="true" className="marquee__group">
-            <div className="singleBlog">
+              <div className="singleBlog">
                 <img src="blog3.png" alt="" />
               </div>
               <div className="singleBlog">
@@ -169,6 +201,21 @@ export default function Home() {
           and soul only, karate, a martial art of self-defense. To master the
           way, a long and arduous journey awaits.
         </p>
+      </section>
+
+      <section className="gg">
+        <div className="items">
+          <div className="item item1"></div>
+          <div className="item item2"></div>
+          <div className="item item3"></div>
+          <div className="item item4"></div>
+          <div className="item item5"></div>
+          <div className="item item6"></div>
+          <div className="item item7"></div>
+          <div className="item item8"></div>
+          <div className="item item9"></div>
+          <div className="item item10"></div>
+        </div>
       </section>
     </div>
   );
