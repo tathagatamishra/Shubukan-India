@@ -41,6 +41,10 @@ export default function Navbar() {
           <div></div>
         </div>
         <div className="menuDiv">
+          <p>KATA</p>
+          <div></div>
+        </div>
+        <div className="menuDiv">
           <p>CALENDAR</p>
           <div></div>
         </div>
@@ -58,10 +62,6 @@ export default function Navbar() {
         </div>
         <div className="menuDiv">
           <p>CONTACT</p>
-          <div></div>
-        </div>
-        <div className="menuDiv">
-          <p>DOWNLOAD</p>
           <div></div>
         </div>
       </nav>

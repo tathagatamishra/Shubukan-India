@@ -81,6 +81,7 @@
         & .bird {
             & img {
                 width: 100%;
+                user-select: none;
             }
 
             z-index: 1;
@@ -343,6 +344,11 @@
             color: rgba(125, 103, 97, 0.808);
             background: linear-gradient(-90deg, transparent 0%, rgba(88, 78, 78, 0.514) 100%);
             // transform: translate(10px, 10px);
+
+            &::selection {
+                color: rgb(216, 86, 86);
+                background: rgb(248, 235, 141);
+            }
         }
 
         & .image {
@@ -366,6 +372,8 @@
                 display: block;
                 background-size: cover;
                 transition: transform 0.4s;
+
+                user-select: none;
             }
 
             &:hover {
@@ -439,6 +447,11 @@
                 text-align: left;
                 margin-top: 4rem;
             }
+
+            &::selection {
+                color: rgb(216, 86, 86);
+                background: rgb(248, 235, 141);
+            }
         }
 
         & p {
@@ -457,8 +470,13 @@
 
             &:last-child {
                 margin-top: 4rem;
-                margin-bottom: 0;
+                margin-bottom: 0rem;
                 text-align: right;
+            }
+
+            &::selection {
+                color: rgb(216, 86, 86);
+                background: rgb(248, 235, 141);
             }
         }
 
@@ -469,6 +487,7 @@
 
             display: flex;
             flex-direction: row;
+            justify-content: center;
             align-items: center;
             position: relative;
 
@@ -478,7 +497,8 @@
                 height: 28rem;
                 position: absolute;
                 left: 0;
-                background-image: linear-gradient(to right, rgb(231, 221, 211), transparent);
+                background-image: linear-gradient(to right, rgba(231, 221, 211, 0.427) 0%, transparent 100%);
+                box-shadow: inset 170px 0px 20px -150px rgb(231, 221, 211);
             }
 
             .rightBar {
@@ -487,7 +507,8 @@
                 height: 28rem;
                 position: absolute;
                 right: 0;
-                background-image: linear-gradient(to left, rgb(231, 221, 211), transparent);
+                background-image: linear-gradient(to left, rgba(231, 221, 211, 0.427) 0%, transparent 100%);
+                box-shadow: inset -170px 0px 20px -150px rgb(231, 221, 211);
             }
 
             .marquee {
@@ -495,6 +516,9 @@
                 overflow: hidden;
                 user-select: none;
                 gap: var(--gap);
+                // border: solid red;
+                // width: 80%;
+                margin: 0 2px;
 
                 &:hover {
                     .marquee__group {
@@ -512,12 +536,6 @@
                 min-width: 100%;
                 animation: scroll-x var(--duration) linear infinite;
             }
-
-            // @media (prefers-reduced-motion: reduce) {
-            //     .marquee__group {
-            //         animation-play-state: paused;
-            //     }
-            // }
 
             @keyframes scroll-x {
                 from {
@@ -574,7 +592,8 @@
                 height: 28rem;
                 position: absolute;
                 left: 0;
-                background-image: linear-gradient(to right, rgb(231, 221, 211), transparent);
+                background-image: linear-gradient(to right, rgba(231, 221, 211, 0.427) 0%, transparent 100%);
+                box-shadow: inset 170px 0px 20px -150px rgb(231, 221, 211);
             }
 
             .rightBar {
@@ -583,7 +602,8 @@
                 height: 28rem;
                 position: absolute;
                 right: 0;
-                background-image: linear-gradient(to left, rgb(231, 221, 211), transparent);
+                background-image: linear-gradient(to left, rgba(231, 221, 211, 0.427) 0%, transparent 100%);
+                box-shadow: inset -170px 0px 20px -150px rgb(231, 221, 211);
             }
 
             .marquee {
@@ -608,12 +628,6 @@
                 min-width: 100%;
                 animation: scroll-x var(--duration) linear infinite;
             }
-
-            // @media (prefers-reduced-motion: reduce) {
-            //     .marquee__group {
-            //         animation-play-state: paused;
-            //     }
-            // }
 
             .marquee--reverse .marquee__group {
                 animation-direction: reverse;

@@ -8,30 +8,47 @@ export default function Footer() {
 
   return (
     <div className="Footer">
-      <div className="upperFoot">
-        <section className="footLeft">
-          <div className="newsLetter">
-            <h1>Subscribe to our newsletter</h1>
+      <div className="footSub">
+        <h1>Subscribe to our newsletter</h1>
 
-            <form action="">
-              <input type="email" />
-              <button onClick={news}>&#10230;</button>
-            </form>
+        <form action="">
+          <input type="email" />
+          <button onClick={news}>&#10230;</button>
+        </form>
 
-            <div></div>
-          </div>
-
-          <div className="contactUs">
-            <div></div>
-            <h1>Connect with us</h1>
-          </div>
-        </section>
-        <div className="midLine"></div>
-        <section className="footRight">
-          <div></div>
-        </section>
+        <div className="underLine"></div>
       </div>
-      <div className="lowerFoot">
+
+      <div className="footContent">
+        <div className="footOptions1">
+          <p>Organization</p>
+          <p>Contact Us</p>
+          <p>Calender</p>
+          <p>Member</p>
+          <p>Service</p>
+        </div>
+        <div className="midLine"></div>
+        <div className="footOptions2">
+          <p>Blog</p>
+          <p>Sprit</p>
+          <p>Kata</p>
+          <p>History</p>
+          <p>syllabus</p>
+          <p>Downloads</p>
+        </div>
+        <div className="midLine"></div>
+        <div className="footOptions3">
+          <p>Terms & Conditions</p>
+          <p>Privacy Policy</p>
+          <p>Refund Policy</p>
+          <p>Help and FAQ</p>
+          <p>Pricing</p>
+        </div>
+      </div>
+
+      <div className="footSocial"></div>
+
+      <div className="footLogo">
         <div className="logoImg">
           <img src="shubukanIndia.png" alt="" />
         </div>
@@ -42,10 +59,11 @@ export default function Footer() {
           <img src="wbk.png" alt="" />
         </div>
       </div>
+
       <div className="footLine"></div>
+
       <div className="footExtra">
         <p>© 2023 Shubokan India</p>
-        <p>Terms & Conditions</p>
       </div>
     </div>
   );
