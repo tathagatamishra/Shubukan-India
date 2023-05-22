@@ -95,12 +95,12 @@
                 height: 2rem;
                 width: 4rem;
                 font-size: 2rem;
-                padding: 0;
+                padding: 0 0 4px 0;
                 line-height: 0;
                 // transform: rotate(-10deg);
                 color: #565250;
                 background: #bcb3b3;
-                // background: linear-gradient(to right, #403D3C 0%, transparent 100%);
+                background: linear-gradient(to left, #bcb3b3 0%, transparent 100%);
                 border: 3px solid #777270;
                 border: none;
                 transition: 200ms;
@@ -108,13 +108,13 @@
 
                 &:hover {
                     // border: 3px solid #D9C8A9;
-                    padding: 0 0 0 2.8rem;
-                    transform: translateX(-10%);
+                    padding: 0 0 4px 2.8rem;
+                    transform: translateX(-30%);
                 }
 
                 &:active {
                     // border: 3px solid #777270;
-                    padding: 0 0 0 2rem;
+                    padding: 0 0 4px 2rem;
                     transform: translateX(0%);
                 }
             }
@@ -152,12 +152,12 @@
         flex-direction: row;
         justify-content: center;
         // border: solid red 1px;
-        
+
         & p {
             margin: 0;
 
             font-size: 1.2rem;
-            
+
             font-family: 'Amarante', cursive;
             font-family: 'Andika', sans-serif;
             font-family: 'Bellefair', serif;
@@ -185,6 +185,7 @@
             width: 10rem;
             margin-right: 4rem;
         }
+
         & .footOptions2 {
             display: flex;
             flex-direction: column;
@@ -192,16 +193,17 @@
             align-items: center;
             margin: 0 4rem;
         }
+
         & .footOptions3 {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
-            
+
             width: 10rem;
             margin-left: 4rem;
         }
-        
+
         & .midLine {
             height: 100%;
             width: 1px;

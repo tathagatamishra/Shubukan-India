@@ -6,9 +6,10 @@ export default function Home() {
   const [isDown, setIsDown] = useState(false);
   const [startX, setStartX] = useState(null);
   const [scrollLeft, setScrollLeft] = useState(null);
+  const [item, setItem] = useState(".items1")
 
   useEffect(() => {
-    const sliderElement = document.querySelector(".marquee");
+    const sliderElement = document.querySelector(item);
     setSlider(sliderElement);
 
     const handleMouseDown = (e) => {
@@ -51,7 +52,7 @@ export default function Home() {
         sliderElement.removeEventListener("mousemove", handleMouseMove);
       }
     };
-  }, [slider, isDown, startX, scrollLeft]);
+  }, [slider, isDown, startX, scrollLeft, item]);
 
   return (
     <div className="Home">
@@ -147,71 +148,23 @@ export default function Home() {
         <h1>Blog</h1>
         <div className="row1">
           <div className="leftBar"></div>
-          <div className="marquee">
-            <section className="marquee__group">
-              <div className="singleBlog">
-                <img src="blog1.jpg" alt="" />
-              </div>
-              <div className="singleBlog">
-                <img src="blog2.jpg" alt="" />
-              </div>
-              <div className="singleBlog">
-                <img src="blog1.jpg" alt="" />
-              </div>
-              <div className="singleBlog">
-                <img src="blog2.jpg" alt="" />
-              </div>
-            </section>
-
-            <section aria-hidden="true" className="marquee__group">
-              <div className="singleBlog">
-                <img src="blog1.jpg" alt="" />
-              </div>
-              <div className="singleBlog">
-                <img src="blog2.jpg" alt="" />
-              </div>
-              <div className="singleBlog">
-                <img src="blog1.jpg" alt="" />
-              </div>
-              <div className="singleBlog">
-                <img src="blog2.jpg" alt="" />
-              </div>
-            </section>
+          <div className="items1" onMouseOver={()=>setItem(".items1")}>
+            <div className="item1"></div>
+            <div className="item1"></div>
+            <div className="item1"></div>
+            <div className="item1"></div>
+            <div className="item1"></div>
           </div>
           <div className="rightBar"></div>
         </div>
-        <div className="row2">
+        <div className="row2" onMouseOver={()=>setItem(".items2")}>
           <div className="leftBar"></div>
-          <div className="marquee marquee--reverse">
-            <section className="marquee__group">
-              <div className="singleBlog">
-                <img src="blog3.png" alt="" />
-              </div>
-              <div className="singleBlog">
-                <img src="blog4.png" alt="" />
-              </div>
-              <div className="singleBlog">
-                <img src="blog5.png" alt="" />
-              </div>
-              <div className="singleBlog">
-                <img src="blog6.png" alt="" />
-              </div>
-            </section>
-
-            <section aria-hidden="true" className="marquee__group">
-              <div className="singleBlog">
-                <img src="blog3.png" alt="" />
-              </div>
-              <div className="singleBlog">
-                <img src="blog4.png" alt="" />
-              </div>
-              <div className="singleBlog">
-                <img src="blog5.png" alt="" />
-              </div>
-              <div className="singleBlog">
-                <img src="blog6.png" alt="" />
-              </div>
-            </section>
+          <div className="items2">
+            <div className="item2"></div>
+            <div className="item2"></div>
+            <div className="item2"></div>
+            <div className="item2"></div>
+            <div className="item2"></div>
           </div>
           <div className="rightBar"></div>
         </div>
@@ -221,21 +174,6 @@ export default function Home() {
           way, a long and arduous journey awaits.
         </p>
       </section>
-
-      {/* <section className="gg">
-        <div className="items">
-          <div className="item item1"></div>
-          <div className="item item2"></div>
-          <div className="item item3"></div>
-          <div className="item item4"></div>
-          <div className="item item5"></div>
-          <div className="item item6"></div>
-          <div className="item item7"></div>
-          <div className="item item8"></div>
-          <div className="item item9"></div>
-          <div className="item item10"></div>
-        </div>
-      </section> */}
     </div>
   );
 }

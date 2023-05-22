@@ -12,7 +12,7 @@ function App() {
       y = ev.clientY;
 
     // lag cursor behind mouse
-    gsap.to("#cursor-follow", {
+    gsap.to("#cursor", {
       duration: 0.2,
       x,
       y,
@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      <div id="cursor-follow"></div>
+      <div id="cursor"></div>
       <div className="tree">
         <img src="tree.png" alt="" />
       </div>
