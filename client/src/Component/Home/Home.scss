@@ -529,9 +529,10 @@
         & .blogLine {
             width: 80%;
             height: 2px;
+            margin: 0 0 2rem;
             background: linear-gradient(90deg, transparent 0%, rgba(88, 78, 78, 0.863) 100%);
             align-self: self-end;
-            transform: translate(40px, -30px);
+            // transform: translate(40px, -30px);
         }
 
         & h1 {
