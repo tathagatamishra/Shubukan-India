@@ -21,10 +21,15 @@
     right: 0%;
     position: absolute;
 
-    // background-image: url("https://overcurious-documen.000webhostapp.com/images/tree.png");
-    // background-size: 500px 500px;
+    transition: 300ms;
     filter: opacity(80%);
-    transform: scaleX(-1)
+    transform: scaleX(-1);
+
+    @media screen and (max-width: 700px) {
+      height: 450px;
+      width: 450px;
+      top: 2%;
+    }
   }
 
   & .line {
@@ -37,7 +42,8 @@
     display: flex;
     flex-direction: column;
     justify-content: end;
-
+    
+    transition: 300ms;
     animation-name: anim;
     animation-duration: 10s;
     animation-timing-function: ease-in-out;
@@ -73,6 +79,10 @@
         }
       }
     }
+
+    @media screen and (max-width: 700px) {
+      right: 8%;
+    }
   }
 
   & .webBody {
@@ -84,7 +94,7 @@
     justify-content: center;
     align-items: center;
 
-    background-image: url("https://overcurious-documen.000webhostapp.com/images/paper.png");
+    background-image: url("https://www.tilingtextures.com/wp-content/uploads/2018/11/0068-1-768x768.jpg");
     background-size: 250px 250px;
   }
 
@@ -102,7 +112,7 @@
     backdrop-filter: saturate(1000%) invert(100%) hue-rotate(140deg);
     z-index: 100;
 
-    
+
 
     @media screen and (max-width: 810px) {
       display: none;

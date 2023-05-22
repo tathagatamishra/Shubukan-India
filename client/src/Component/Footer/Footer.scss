@@ -184,6 +184,7 @@
 
             width: 10rem;
             margin-right: 4rem;
+            transition: 200ms;
         }
 
         & .footOptions2 {
@@ -192,6 +193,7 @@
             justify-content: center;
             align-items: center;
             margin: 0 4rem;
+            transition: 200ms;
         }
 
         & .footOptions3 {
@@ -202,12 +204,29 @@
 
             width: 10rem;
             margin-left: 4rem;
+            transition: 200ms;
         }
 
         & .midLine {
             height: 100%;
             width: 1px;
             background: linear-gradient(#403D3C, transparent);
+        }
+
+        @media screen and (max-width: 700px) {
+            & .footOptions1 {
+                width: 10rem;
+                margin-right: 2rem;
+            }
+    
+            & .footOptions2 {
+                margin: 0 2rem;
+            }
+    
+            & .footOptions3 {
+                width: 10rem;
+                margin-left: 2rem;
+            }
         }
     }
 
@@ -238,6 +257,15 @@
                 user-select: none;
                 display: block;
                 background-size: cover;
+                transition: 200ms;
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+            & .logoImg {
+                & img {
+                    height: 10rem;
+                }
             }
         }
     }

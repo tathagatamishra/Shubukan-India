@@ -33,7 +33,7 @@ export default function Home() {
       if (!isDown) return;
       e.preventDefault();
       const x = e.pageX - sliderElement.offsetLeft;
-      const walk = (x - startX) * 3; //scroll-fast
+      const walk = (x - startX) * .5; //scroll-fast
       sliderElement.scrollLeft = scrollLeft - walk;
     };
 
