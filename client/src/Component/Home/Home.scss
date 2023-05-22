@@ -390,6 +390,7 @@
 
                 & p {
                     font-size: 1.3rem;
+                    line-height: 1.7rem;
                 }
             }
 
@@ -420,7 +421,7 @@
         }
 
         @media screen and (max-width: 360px) {
-            height: 52rem;
+            height: 50rem;
         }
     }
 
