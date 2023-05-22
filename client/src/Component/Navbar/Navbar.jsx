@@ -28,8 +28,9 @@ export default function Navbar() {
   return (
     <div id="Navbar" style={position}>
       <section className="logo">
-      <Spline scene="https://prod.spline.design/IRCi38KJr6aI3aIN/scene.splinecode" />
-        <img src="logo.png" />
+      {/* <Spline scene="https://prod.spline.design/IRCi38KJr6aI3aIN/scene.splinecode" /> */}
+        <img className="logo1" src="shubukan.png" />
+        <img className="logo2" src="logo.png" />
       </section>
       <nav className="options">
         <div className="menuDiv">
@@ -42,10 +43,6 @@ export default function Navbar() {
         </div>
         <div className="menuDiv">
           <p>KATA</p>
-          <div></div>
-        </div>
-        <div className="menuDiv">
-          <p>CALENDAR</p>
           <div></div>
         </div>
         <div className="menuDiv">
