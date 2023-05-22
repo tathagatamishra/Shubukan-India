@@ -118,10 +118,22 @@
                 color: #2a2727;
                 font-size: 3rem;
                 letter-spacing: 0.2rem;
+                text-shadow: 
+                0 0 10px rgb(231, 221, 211), 
+                0 0 20px rgb(231, 221, 211), 
+                0 0 30px rgb(231, 221, 211), 
+                0 0 40px rgb(231, 221, 211), 
+                0 0 50px rgb(231, 221, 211);
             }
 
             & p {
                 font-size: 1.2rem;
+                text-shadow: 
+                0 0 5px rgb(231, 221, 211), 
+                0 0 10px rgb(231, 221, 211), 
+                0 0 20px rgb(231, 221, 211), 
+                0 0 30px rgb(231, 221, 211), 
+                0 0 30px rgb(231, 221, 211);
             }
 
             & .bird {
