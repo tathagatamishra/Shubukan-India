@@ -236,6 +236,10 @@
             flex-direction: row;
             justify-content: center;
 
+            & p {
+                text-align: right;
+            }
+
             & .footOptions1 {
                 width: 10rem;
                 margin-right: .5rem;
@@ -268,7 +272,7 @@
             justify-content: center;
 
             & .footOptions1 {
-                width: 10rem;
+                width: 8.5rem;
                 margin-right: .5rem;
             }
 
@@ -277,7 +281,7 @@
             }
 
             & .footOptions3 {
-                width: 10rem;
+                width: 8.5rem;
                 margin-left: .5rem;
             }
         }
