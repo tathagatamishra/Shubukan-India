@@ -34,6 +34,11 @@
         opacity: 70%;
       }
     }
+    @media screen and (max-width: 400px) {
+      height: 400px;
+      width: 400px;
+      top: 2%;
+    }
   }
 
   & .line {
@@ -87,6 +92,9 @@
     @media screen and (max-width: 700px) {
       right: 8%;
     }
+    @media screen and (max-width: 400px) {
+      height: 36rem;
+    }
   }
 
   & .webBody {
@@ -97,6 +105,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    border: 1px red solid;
 
     background-image: url("https://www.tilingtextures.com/wp-content/uploads/2018/11/0068-1-768x768.jpg");
     background-size: 250px 250px;
@@ -122,6 +132,4 @@
       display: none;
     }
   }
-
-
 }

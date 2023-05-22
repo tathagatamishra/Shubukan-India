@@ -8,7 +8,7 @@
 
     @media screen and (max-width: 400px) {
         width: 90%;
-      }
+    }
 
     & .hero {
         width: 100%;
@@ -122,22 +122,22 @@
                 color: #2a2727;
                 font-size: 3rem;
                 letter-spacing: 0.2rem;
-                text-shadow: 
-                0 0 10px rgb(231, 221, 211), 
-                0 0 20px rgb(231, 221, 211), 
-                0 0 30px rgb(231, 221, 211), 
-                0 0 40px rgb(231, 221, 211), 
-                0 0 50px rgb(231, 221, 211);
+                text-shadow:
+                    0 0 10px rgb(231, 221, 211),
+                    0 0 20px rgb(231, 221, 211),
+                    0 0 30px rgb(231, 221, 211),
+                    0 0 40px rgb(231, 221, 211),
+                    0 0 50px rgb(231, 221, 211);
             }
 
             & p {
                 font-size: 1.2rem;
-                text-shadow: 
-                0 0 5px rgb(231, 221, 211), 
-                0 0 10px rgb(231, 221, 211), 
-                0 0 20px rgb(231, 221, 211), 
-                0 0 30px rgb(231, 221, 211), 
-                0 0 30px rgb(231, 221, 211);
+                text-shadow:
+                    0 0 5px rgb(231, 221, 211),
+                    0 0 10px rgb(231, 221, 211),
+                    0 0 20px rgb(231, 221, 211),
+                    0 0 30px rgb(231, 221, 211),
+                    0 0 30px rgb(231, 221, 211);
             }
 
             & .bird {
@@ -156,6 +156,41 @@
 
                     to {
                         transform: scaleX(-1) translate(25%, 200%);
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            height: 30rem;
+
+            & h1 {
+                margin: 1.5rem 0 2rem;
+                color: #2a2727;
+                font-size: 2.8rem;
+                letter-spacing: 0.2rem;
+            }
+
+            & p {
+                font-size: 1rem;
+            }
+
+            & .bird {
+                height: 200px;
+                width: 200px;
+                transform: scaleX(-1) translate(25%, 160%);
+
+                animation-name: fly;
+                animation-duration: 5s;
+                animation-timing-function: ease-in-out;
+
+                @keyframes fly {
+                    from {
+                        transform: scaleX(-1) translate(55%, 200%);
+                    }
+
+                    to {
+                        transform: scaleX(-1) translate(25%, 160%);
                     }
                 }
             }
@@ -211,7 +246,6 @@
                 justify-content: center;
                 align-items: center;
 
-
                 & div {
                     width: 2px;
                     height: 3rem;
@@ -236,6 +270,38 @@
                     &::selection {
                         color: #A64B37;
                         background: #D9C8A9;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 400px) {
+                & h1 {
+                    font-size: 2.2rem;
+                }
+
+                & div {
+                    & div {
+                        height: 2.8rem;
+                    }
+
+                    & p {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 360px) {
+                & h1 {
+                    font-size: 2rem;
+                }
+
+                & div {
+                    & div {
+                        height: 2.8rem;
+                    }
+
+                    & p {
+                        font-size: 1.1rem;
                     }
                 }
             }
@@ -313,6 +379,7 @@
                     line-height: 3rem;
                 }
             }
+
             @media screen and (max-width: 400px) {
 
                 & h1 {
@@ -325,6 +392,7 @@
                     font-size: 1.3rem;
                 }
             }
+
             @media screen and (max-width: 360px) {
 
                 & h1 {
@@ -342,12 +410,15 @@
         @media screen and (max-width: 700px) {
             height: 50rem;
         }
+
         @media screen and (max-width: 500px) {
             height: 55rem;
         }
+
         @media screen and (max-width: 400px) {
             height: 50rem;
         }
+
         @media screen and (max-width: 360px) {
             height: 52rem;
         }
@@ -688,9 +759,7 @@
             }
         }
 
-        @media screen and (max-width: 400px) {
-            
-        }
+        @media screen and (max-width: 400px) {}
     }
 }
 
