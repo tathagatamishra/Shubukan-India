@@ -40,25 +40,25 @@ export default function Navbar() {
           <div></div>
         </NavLink>
 
-        <NavLink to="/" className="menuDiv">
+        {/* <NavLink to="/" className="menuDiv">
           <p>ORGANIZATION</p>
           <div></div>
-        </NavLink>
+        </NavLink> */}
 
         <NavLink to="/kata" className="menuDiv">
           <p>KATA</p>
           <div></div>
         </NavLink>
 
-        <NavLink to="/" className="menuDiv">
+        {/* <NavLink to="/" className="menuDiv">
           <p>MEMBER</p>
           <div></div>
-        </NavLink>
+        </NavLink> */}
 
-        <NavLink to="/" className="menuDiv">
+        {/* <NavLink to="/" className="menuDiv">
           <p>SERVICE</p>
           <div></div>
-        </NavLink>
+        </NavLink> */}
 
         <NavLink to="/blog" className="menuDiv">
           <p>BLOG</p>
