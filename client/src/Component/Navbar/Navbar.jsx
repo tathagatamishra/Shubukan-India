@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Spline from "@splinetool/react-spline";
+import { NavLink } from "react-router-dom";
+
 import "./Navbar.scss";
 
 export default function Navbar() {
@@ -28,39 +30,45 @@ export default function Navbar() {
   return (
     <div id="Navbar" style={position}>
       <section className="logo">
-      {/* <Spline scene="https://prod.spline.design/IRCi38KJr6aI3aIN/scene.splinecode" /> */}
+        {/* <Spline scene="https://prod.spline.design/IRCi38KJr6aI3aIN/scene.splinecode" /> */}
         <img className="logo1" src="shubukan.png" />
         <img className="logo2" src="logo.png" />
       </section>
       <nav className="options">
-        <div className="menuDiv">
+        <NavLink to="/" className="menuDiv">
           <p>HOME</p>
           <div></div>
-        </div>
-        <div className="menuDiv">
+        </NavLink>
+
+        <NavLink to="/" className="menuDiv">
           <p>ORGANIZATION</p>
           <div></div>
-        </div>
-        <div className="menuDiv">
+        </NavLink>
+
+        <NavLink to="/kata" className="menuDiv">
           <p>KATA</p>
           <div></div>
-        </div>
-        <div className="menuDiv">
+        </NavLink>
+
+        <NavLink to="/" className="menuDiv">
           <p>MEMBER</p>
           <div></div>
-        </div>
-        <div className="menuDiv">
+        </NavLink>
+
+        <NavLink to="/" className="menuDiv">
           <p>SERVICE</p>
           <div></div>
-        </div>
-        <div className="menuDiv">
+        </NavLink>
+
+        <NavLink to="/blog" className="menuDiv">
           <p>BLOG</p>
           <div></div>
-        </div>
-        <div className="menuDiv">
+        </NavLink>
+
+        <NavLink to="/" className="menuDiv">
           <p>CONTACT</p>
           <div></div>
-        </div>
+        </NavLink>
       </nav>
     </div>
   );

@@ -8,11 +8,11 @@
 
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
     justify-content: space-between;
+    align-items: flex-start;
 
     // background-image: linear-gradient(white, white, transparent);
-    box-shadow: inset 0px 260px 40px -150px  white;
+    box-shadow: inset 0px 260px 40px -150px white;
     transition: all 1s ease-in-out 0s;
     // transition: 1s;
 
@@ -39,24 +39,29 @@
             user-select: none;
             transition: 300ms;
         }
+
         & .logo2 {
             height: 5rem;
             margin-left: .5rem;
             user-select: none;
             transition: 300ms;
         }
+
         @media screen and (max-width: 800px) {
             & .logo1 {
                 height: 4rem;
             }
+
             & .logo2 {
                 height: 4rem;
             }
         }
+
         @media screen and (max-width: 700px) {
             & .logo1 {
                 height: 4rem;
             }
+
             & .logo2 {
                 height: 3rem;
             }
@@ -85,12 +90,18 @@
             justify-content: center;
             align-items: center;
 
+            cursor: none;
+            text-decoration: none;
+            color: black;
+            font-family: 'GFS Neohellenic', sans-serif;
+
             & p {
                 padding: 0;
                 margin: 0;
 
                 transition: 300ms;
 
+                text-decoration: none;
                 font-size: .9rem;
                 font-weight: 900;
                 // font-family: 'Amarante', cursive;
@@ -155,10 +166,12 @@
             }
         }
     }
+
     @media screen and (max-width: 500px) {
         & .logo {
             margin: .5rem 0 0 .5rem;
         }
+
         & .options {
             margin: .5rem .5rem 0 0;
         }

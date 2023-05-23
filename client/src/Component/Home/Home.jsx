@@ -6,7 +6,7 @@ export default function Home() {
   const [isDown, setIsDown] = useState(false);
   const [startX, setStartX] = useState(null);
   const [scrollLeft, setScrollLeft] = useState(null);
-  const [item, setItem] = useState(".items1")
+  const [item, setItem] = useState(".items1");
 
   useEffect(() => {
     const sliderElement = document.querySelector(item);
@@ -33,7 +33,7 @@ export default function Home() {
       if (!isDown) return;
       e.preventDefault();
       const x = e.pageX - sliderElement.offsetLeft;
-      const walk = (x - startX) * .5; //scroll-fast
+      const walk = (x - startX) * 0.5; //scroll-fast
       sliderElement.scrollLeft = scrollLeft - walk;
     };
 
@@ -56,6 +56,13 @@ export default function Home() {
 
   return (
     <div className="Home">
+      <div className="tree">
+        <img src="tree.png" alt="" />
+      </div>
+      <div className="line">
+        <img src="bushido.png" alt="" />
+      </div>
+
       <section className="hero">
         <h1>SHORIN RYU</h1>
         <p>
@@ -148,7 +155,7 @@ export default function Home() {
         <h1>Blog</h1>
         <div className="row1">
           <div className="leftBar"></div>
-          <div className="items1" onMouseOver={()=>setItem(".items1")}>
+          <div className="items1" onMouseOver={() => setItem(".items1")}>
             <div className="item1"></div>
             <div className="item1"></div>
             <div className="item1"></div>
@@ -157,7 +164,7 @@ export default function Home() {
           </div>
           <div className="rightBar"></div>
         </div>
-        <div className="row2" onMouseOver={()=>setItem(".items2")}>
+        <div className="row2" onMouseOver={() => setItem(".items2")}>
           <div className="leftBar"></div>
           <div className="items2">
             <div className="item2"></div>
