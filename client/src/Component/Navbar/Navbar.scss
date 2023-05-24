@@ -94,6 +94,7 @@
             text-decoration: none;
             color: black;
             font-family: 'GFS Neohellenic', sans-serif;
+            transition: 0.3s ease 0s, left 0.3s ease 0s;
 
             & p {
                 padding: 0;
@@ -113,6 +114,7 @@
                 font-family: 'GFS Neohellenic', sans-serif;
                 // font-family: 'Pompiere', cursive;
                 // font-family: 'Tenali Ramakrishna', sans-serif;
+                transition: 0.3s ease 0s, left 0.3s ease 0s;
 
                 &::selection {
                     color: rgb(216, 86, 86);
@@ -126,10 +128,10 @@
                 height: 0px;
                 transition: 300ms;
                 width: 0;
+                transition: width 0.3s ease 0s, left 0.3s ease 0s;
             }
 
             &:hover {
-                transition: 500ms;
 
                 & p {
                     padding: 0;
@@ -148,7 +150,6 @@
             }
 
             &:active {
-                transition: 500ms;
 
                 & p {
                     transform: translateY(6px);

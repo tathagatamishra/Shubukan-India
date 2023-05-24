@@ -13,9 +13,16 @@
 // font-family: 'Pompiere', cursive;
 // font-family: 'Tenali Ramakrishna', sans-serif;
 
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
