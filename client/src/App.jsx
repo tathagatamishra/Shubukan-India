@@ -9,6 +9,9 @@ import Kata from "./Component/Kata/Kata";
 import Blog from "./Component/Blog/Blog";
 
 function App() {
+
+  const [hidePopup, setHidePopup] = useState({})
+
   document.addEventListener("mousemove", (ev) => {
     const x = ev.clientX,
       y = ev.clientY;
@@ -28,7 +31,7 @@ function App() {
 
         <Navbar />
 
-        <div className="webBody">
+        <div className="webBody" onClick={()=>setHidePopup({})}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/kata" element={<Kata />} />

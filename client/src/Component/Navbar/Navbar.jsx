@@ -4,8 +4,9 @@ import { NavLink } from "react-router-dom";
 
 import "./Navbar.scss";
 
-export default function Navbar() {
+export default function Navbar(props) {
   const [isBurger, setIsBurger] = useState(true);
+  const [burgerStyle, setBurgerStyle] = useState({height: "1rem", width: "4rem", transition: 'all .3s ease-in-out'});
 
   const [position, setPosition] = useState({ top: "0rem" });
   const [lastScrollTop, setLastScrollTop] = useState(Infinity);
@@ -68,8 +69,16 @@ export default function Navbar() {
     </nav>
   );
   const burger = (
-    <nav className="burger">
-      
+    <nav
+      className="burger"
+      onClick={() => setBurgerStyle({ height: "96vh", width: "6rem", transition: 'all .3s ease-in-out' })}
+      style={burgerStyle}
+    >
+      <div className="burgerLine">
+        <div className="x"></div>
+        <div className="y"></div>
+      </div>
+      <div className="lineMargin"></div>
     </nav>
   );
 

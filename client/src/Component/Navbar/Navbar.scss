@@ -168,7 +168,73 @@
         }
     }
 
+    & .burger {
+        width: 4rem;
+        // height: 95vh;
+        margin: 1.5rem 0;
+        border: solid;
+        
+        display: flex;
+        flex-direction: row;
+
+        transition: all .3s ease-in-out 0s;
+        
+        & .burgerLine {
+            transition: all .3s ease-in-out 0s;
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            & .x {
+                height: 2px;
+                width: 100%;
+                background: #d1a59b;
+                transition: all .3s ease-in-out 0s;
+            }
+
+            & .y {
+                margin-top: .5rem;
+                height: 2px;
+                width: 100%;
+                background: #A64B37;
+                transition: all .3s ease-in-out 0s;
+            }
+        }
+
+        & .lineMargin {
+            width: 1rem;
+            transition: all .3s ease-in-out 0s;
+        }
+
+        // &:hover {
+        //     width: 6rem;
+        // }
+
+        // &:active {
+        //     // width: 6rem;
+        //     // height: 96vh;
+            
+        //     & .burgerLine {
+        //         background: #D2D9D3;
+        //         justify-content: space-between;
+
+        //         & .x {
+        //             margin: 0;
+        //         }
+        //     }
+        //     & .lineMargin {
+        //         width: 0rem;
+        //     }
+        // }
+    }
+
     @media screen and (max-width: 500px) {
+        height: 7rem;
+        box-shadow: inset 0px 240px 30px -150px white;
+
         & .logo {
             margin: .5rem 0 0 .5rem;
         }
