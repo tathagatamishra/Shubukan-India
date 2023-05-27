@@ -60,6 +60,7 @@ export default function Home() {
         <img src="tree.png" alt="" />
       </div>
       <div className="line">
+        <div className="lineColor"></div>
         <img src="bushido.png" alt="" />
       </div>
 

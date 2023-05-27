@@ -5,6 +5,8 @@ import { NavLink } from "react-router-dom";
 import "./Navbar.scss";
 
 export default function Navbar() {
+  const [isBurger, setIsBurger] = useState(true);
+
   const [position, setPosition] = useState({ top: "0rem" });
   const [lastScrollTop, setLastScrollTop] = useState(Infinity);
 
@@ -27,6 +29,50 @@ export default function Navbar() {
     setLastScrollTop(scrollTop); //New Position Stored
   });
 
+  const option = (
+    <nav className="options">
+      <NavLink to="/" className="menuDiv">
+        <p>HOME</p>
+        <div></div>
+      </NavLink>
+
+      {/* <NavLink to="/" className="menuDiv">
+    <p>ORGANIZATION</p>
+    <div></div>
+  </NavLink> */}
+
+      <NavLink to="/kata" className="menuDiv">
+        <p>KATA</p>
+        <div></div>
+      </NavLink>
+
+      {/* <NavLink to="/" className="menuDiv">
+    <p>MEMBER</p>
+    <div></div>
+  </NavLink> */}
+
+      {/* <NavLink to="/" className="menuDiv">
+    <p>SERVICE</p>
+    <div></div>
+  </NavLink> */}
+
+      <NavLink to="/blog" className="menuDiv">
+        <p>BLOG</p>
+        <div></div>
+      </NavLink>
+
+      <NavLink to="/" className="menuDiv">
+        <p>CONTACT</p>
+        <div></div>
+      </NavLink>
+    </nav>
+  );
+  const burger = (
+    <nav className="burger">
+      
+    </nav>
+  );
+
   return (
     <div id="Navbar" style={position}>
       <section className="logo">
@@ -34,42 +80,7 @@ export default function Navbar() {
         <img className="logo1" src="shubukan.png" />
         <img className="logo2" src="logo.png" />
       </section>
-      <nav className="options">
-        <NavLink to="/" className="menuDiv">
-          <p>HOME</p>
-          <div></div>
-        </NavLink>
-
-        {/* <NavLink to="/" className="menuDiv">
-          <p>ORGANIZATION</p>
-          <div></div>
-        </NavLink> */}
-
-        <NavLink to="/kata" className="menuDiv">
-          <p>KATA</p>
-          <div></div>
-        </NavLink>
-
-        {/* <NavLink to="/" className="menuDiv">
-          <p>MEMBER</p>
-          <div></div>
-        </NavLink> */}
-
-        {/* <NavLink to="/" className="menuDiv">
-          <p>SERVICE</p>
-          <div></div>
-        </NavLink> */}
-
-        <NavLink to="/blog" className="menuDiv">
-          <p>BLOG</p>
-          <div></div>
-        </NavLink>
-
-        <NavLink to="/" className="menuDiv">
-          <p>CONTACT</p>
-          <div></div>
-        </NavLink>
-      </nav>
+      {isBurger ? burger : option}
     </div>
   );
 }
