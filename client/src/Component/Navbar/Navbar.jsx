@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Spline from "@splinetool/react-spline";
 import { NavLink } from "react-router-dom";
 
@@ -6,7 +6,15 @@ import "./Navbar.scss";
 
 export default function Navbar(props) {
   const [isBurger, setIsBurger] = useState(true);
-  const [burgerStyle, setBurgerStyle] = useState({height: "1rem", width: "4rem", transition: 'all .3s ease-in-out'});
+  // const [burger, setBurger] = useState('');
+  const [burgerStyle, setBurgerStyle] = useState({
+    height: "1rem",
+    width: "4rem",
+    transition: "all .3s ease-in-out",
+  });
+  const [empty, setEmpty] = useState({ height: "0rem", display: "none" });
+  const [xRotate, setXRotate] = useState({});
+  const [yRotate, setYRotate] = useState({});
 
   const [position, setPosition] = useState({ top: "0rem" });
   const [lastScrollTop, setLastScrollTop] = useState(Infinity);
@@ -68,18 +76,69 @@ export default function Navbar(props) {
       </NavLink>
     </nav>
   );
+
+  function setStyle() {
+    setBurgerStyle({
+      height: "50vh",
+      width: "8rem",
+      transition: "all .3s ease-in-out",
+    });
+    setEmpty({ height: "3rem" });
+    setXRotate({ transform: "rotate(15deg)" });
+    setYRotate({ transform: "rotate(-15deg)" });
+  }
+  function removeStyle() {
+    setBurgerStyle({
+      height: "1rem",
+      width: "4rem",
+      transition: "all .3s ease-in-out",
+    });
+    setEmpty({ height: "0rem", display: "none" });
+    setXRotate({});
+    setYRotate({});
+    console.log("lol");
+  }
+
   const burger = (
-    <nav
-      className="burger"
-      onClick={() => setBurgerStyle({ height: "96vh", width: "6rem", transition: 'all .3s ease-in-out' })}
-      style={burgerStyle}
-    >
-      <div className="burgerLine">
-        <div className="x"></div>
-        <div className="y"></div>
-      </div>
-      <div className="lineMargin"></div>
-    </nav>
+    <>
+      <nav className="burger" style={burgerStyle}>
+        <div className="empty" style={empty} onClick={removeStyle}></div>
+        <div className="burgerLine" onClick={setStyle}>
+          <div className="x" style={xRotate}></div>
+          <div className="y" style={yRotate}></div>
+          <nav className="optionsMobo">
+            <NavLink to="/" className="menuDivMobo">
+              <p>HOME</p>
+            </NavLink>
+
+            <NavLink to="/" className="menuDivMobo">
+              <p>ORGANIZATION</p>
+            </NavLink>
+
+            <NavLink to="/kata" className="menuDivMobo">
+              <p>KATA</p>
+            </NavLink>
+
+            <NavLink to="/" className="menuDivMobo">
+              <p>MEMBER</p>
+            </NavLink>
+
+            <NavLink to="/" className="menuDivMobo">
+              <p>SERVICE</p>
+            </NavLink>
+
+            <NavLink to="/blog" className="menuDivMobo">
+              <p>BLOG</p>
+            </NavLink>
+
+            <NavLink to="/" className="menuDivMobo">
+              <p>CONTACT</p>
+            </NavLink>
+          </nav>
+          <div className="z"></div>
+        </div>
+      </nav>
+    </>
   );
 
   return (
