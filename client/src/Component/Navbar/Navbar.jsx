@@ -96,6 +96,9 @@ export default function Navbar(props) {
       transform: "rotate(-15deg)",
       background: "radial-gradient(circle, #d1a59b 20%, transparent 100%)",
     });
+    setZGradient({
+      background: "radial-gradient(circle, #A64B37 20%, transparent 100%)",
+    });
   }
   function removeStyle() {
     setIsOption(false);
@@ -104,6 +107,9 @@ export default function Navbar(props) {
       transition: "all .3s ease-in-out",
     });
     setEmpty({ height: "0rem", display: "none" });
+    setZGradient({
+      background: "linear-gradient(to left, #A64B37 20%, transparent 100%)",
+    });
     setXRotate({});
     setYRotate({});
   }
