@@ -145,7 +145,14 @@ export default function Navbar(props) {
           removeStyle();
         }}
       >
-        <div className="empty" style={empty} onClick={removeStyle}></div>
+        <div
+          className="empty"
+          style={empty}
+          onClick={() => {
+            notLineStyle();
+            removeStyle();
+          }}
+        ></div>
         <div className="burgerLine" onClick={setStyle}>
           <div className="x" style={xRotate}></div>
           <div className="y" style={yRotate}></div>
