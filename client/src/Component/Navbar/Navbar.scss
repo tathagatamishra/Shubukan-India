@@ -170,10 +170,9 @@
 
     & .burger {
         width: 4rem;
-        // height: 95vh;
+        height: 20rem;
         margin: 1.5rem 1rem;
         // border: solid 1px rgb(0, 64, 255);
-        background: #D2D9D3;
 
         position: relative;
         display: flex;
@@ -200,7 +199,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            align-items: center;
+            // align-items: center;
 
             transition: all .3s ease-in-out 0s;
 
@@ -212,36 +211,46 @@
                 position: absolute;
 
                 background: #d1a59b;
-
+                background: linear-gradient(to left, #d1a59b 20%, transparent 100%);
                 transition: all .3s ease-in-out 0s;
             }
 
             & .y {
                 height: 2px;
                 width: 100%;
+                top: 0;
+                left: 0;
+                position: absolute;
 
                 background: #d1a59b;
-
+                background: linear-gradient(to left, #d1a59b 20%, transparent 100%);
                 transition: all .3s ease-in-out 0s;
             }
 
             & .z {
-                margin-top: .5rem;
+                margin-top: 1rem;
                 height: 2px;
                 width: 100%;
-                background: #A64B37;
-                transition: all .3s ease-in-out 0s;
+                bottom: 0;
+                position: absolute;
+                // background: linear-gradient(to left, #A64B37 20%, transparent 100%);
+                transition: all 5s ease-in-out 0s;
             }
 
             & .optionsMobo {
-                height: 100%;
-                width: fit-content;
-                margin: 1rem 1rem 0 0;
+                height: 15rem;
+                width: 100%;
+                margin: 0 0 1rem 0;
                 // border: solid;
+
+                position: absolute;
+                bottom: 0;
+
                 display: flex;
                 flex-direction: column;
-                align-items: center;
                 justify-content: space-around;
+                align-items: center;
+                transition: all .3s ease-in-out 0s;
 
                 // cursor: none;
 
@@ -249,7 +258,7 @@
                     // border: solid red;
                     height: 100%;
                     width: fit-content;
-                    margin-left: 1rem;
+                    // margin-left: 1rem;
 
                     display: flex;
                     flex-direction: column;
@@ -260,7 +269,7 @@
                     text-decoration: none;
                     color: black;
                     font-family: 'GFS Neohellenic', sans-serif;
-                    transition: 0.3s ease 0s, left 0.3s ease 0s;
+                    transition: all .3s ease-in-out 0s;
 
                     & p {
                         padding: 0;
@@ -269,7 +278,7 @@
                         transition: 300ms;
 
                         text-decoration: none;
-                        font-size: .9rem;
+                        font-size: 15px;
                         font-weight: 900;
                         // font-family: 'Amarante', cursive;
                         // font-family: 'Andika', sans-serif;
@@ -335,26 +344,9 @@
             }
         }
 
-        // &:hover {
-        //     width: 6rem;
-        // }
-
-        // &:active {
-        //     // width: 6rem;
-        //     // height: 96vh;
-
-        //     & .burgerLine {
-        //         background: #D2D9D3;
-        //         justify-content: space-between;
-
-        //         & .x {
-        //             margin: 0;
-        //         }
-        //     }
-        //     & .lineMargin {
-        //         width: 0rem;
-        //     }
-        // }
+        &:hover {
+            width: 8rem;
+        }
     }
 
     @media screen and (max-width: 500px) {
