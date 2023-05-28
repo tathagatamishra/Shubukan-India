@@ -112,8 +112,12 @@ export default function Navbar(props) {
       background: "radial-gradient(circle, #A64B37 20%, transparent 100%)",
     });
     if (!isOption) {
-      setXRotate({background: "radial-gradient(circle, #d1a59b 20%, transparent 100%)"});
-      setYRotate({background: "radial-gradient(circle, #d1a59b 20%, transparent 100%)"});
+      setXRotate({
+        background: "radial-gradient(circle, #d1a59b 20%, transparent 100%)",
+      });
+      setYRotate({
+        background: "radial-gradient(circle, #d1a59b 20%, transparent 100%)",
+      });
     }
   }
   function notLineStyle() {
@@ -121,8 +125,12 @@ export default function Navbar(props) {
       setZGradient({
         background: "linear-gradient(to left, #A64B37 20%, transparent 100%)",
       });
-      setXRotate({background: "linear-gradient(to left, #d1a59b 20%, transparent 100%)"});
-      setYRotate({background: "linear-gradient(to left, #d1a59b 20%, transparent 100%)"});
+      setXRotate({
+        background: "linear-gradient(to left, #d1a59b 20%, transparent 100%)",
+      });
+      setYRotate({
+        background: "linear-gradient(to left, #d1a59b 20%, transparent 100%)",
+      });
     }
   }
 
@@ -132,7 +140,10 @@ export default function Navbar(props) {
         className="burger"
         style={burgerStyle}
         onMouseOver={lineStyle}
-        onMouseOut={notLineStyle}
+        onMouseOut={() => {
+          notLineStyle();
+          removeStyle();
+        }}
       >
         <div className="empty" style={empty} onClick={removeStyle}></div>
         <div className="burgerLine" onClick={setStyle}>
