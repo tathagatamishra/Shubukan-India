@@ -112,6 +112,7 @@ export default function Navbar(props) {
     });
     setXRotate({});
     setYRotate({});
+    console.log('lol');
   }
   function lineStyle() {
     setZGradient({
@@ -145,11 +146,14 @@ export default function Navbar(props) {
       <nav
         className="burger"
         style={burgerStyle}
-        onMouseOver={lineStyle}
-        onMouseOut={() => {
-          notLineStyle();
-          removeStyle();
+        // onMouseOver={lineStyle}
+        onClick={() => {
+          lineStyle();
+          setStyle();
         }}
+        // onMouseOut={() => {
+        //   notLineStyle();
+        // }}
       >
         <div
           className="empty"
@@ -157,9 +161,10 @@ export default function Navbar(props) {
           onClick={() => {
             notLineStyle();
             removeStyle();
+            console.log('gg');
           }}
         ></div>
-        <div className="burgerLine" onClick={setStyle}>
+        <div className="burgerLine">
           <div className="x" style={xRotate}></div>
           <div className="y" style={yRotate}></div>
           {isOption && (
