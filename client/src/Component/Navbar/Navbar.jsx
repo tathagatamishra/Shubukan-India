@@ -21,6 +21,8 @@ export default function Navbar(props) {
   const [position, setPosition] = useState({ top: "0rem" });
   const [lastScrollTop, setLastScrollTop] = useState(Infinity);
 
+  const [isMenu, setIsMenu] = useState(false);
+
   // This Variable will store the top position
 
   window.addEventListener("scroll", function () {
@@ -112,7 +114,7 @@ export default function Navbar(props) {
     });
     setXRotate({});
     setYRotate({});
-    console.log('lol');
+    console.log("lol");
   }
   function lineStyle() {
     setZGradient({
@@ -161,7 +163,7 @@ export default function Navbar(props) {
           onClick={() => {
             notLineStyle();
             removeStyle();
-            console.log('gg');
+            console.log("gg");
           }}
         ></div>
         <div className="burgerLine">
@@ -204,6 +206,11 @@ export default function Navbar(props) {
     </>
   );
 
+  function showMenu() {
+    if (isMenu == true) setIsMenu(false);
+    else if (isMenu == false) setIsMenu(true);
+  }
+
   return (
     <div id="Navbar" style={position}>
       <section className="logo">
@@ -211,7 +218,45 @@ export default function Navbar(props) {
         <img className="logo1" src="shubukan.png" />
         <img className="logo2" src="logo.png" />
       </section>
-      {isBurger ? burger : option}
+      {/* {isBurger ? burger : option} */}
+
+      <section className="menu">
+        <div className="menuStart" onClick={showMenu}></div>
+        {isMenu && (
+          <>
+            <div className="menuBG"></div>
+            <div className="menuBox">
+              <NavLink to="/" className="menuDivMobo">
+                <p>HOME</p>
+              </NavLink>
+
+              <NavLink to="/" className="menuDivMobo">
+                <p>ORGANIZATION</p>
+              </NavLink>
+
+              <NavLink to="/kata" className="menuDivMobo">
+                <p>KATA</p>
+              </NavLink>
+
+              <NavLink to="/" className="menuDivMobo">
+                <p>MEMBER</p>
+              </NavLink>
+
+              <NavLink to="/" className="menuDivMobo">
+                <p>SERVICE</p>
+              </NavLink>
+
+              <NavLink to="/blog" className="menuDivMobo">
+                <p>BLOG</p>
+              </NavLink>
+
+              <NavLink to="/" className="menuDivMobo">
+                <p>CONTACT</p>
+              </NavLink>
+            </div>
+          </>
+        )}
+      </section>
     </div>
   );
 }
