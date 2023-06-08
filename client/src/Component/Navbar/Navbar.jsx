@@ -64,31 +64,31 @@ export default function Navbar() {
             <div className="menuBox">
               {/* <img src="oldpaper.png" alt="" /> */}
               <nav className="nav">
-                <NavLink to="/" className="opt">
+                <NavLink to="/" className="opt" onClick={showMenu}>
                   <p>HOME</p>
                 </NavLink>
 
-                <NavLink to="/blog" className="opt">
+                <NavLink to="/blog" className="opt" onClick={showMenu}>
                   <p>BLOG</p>
                 </NavLink>
 
-                <NavLink to="/kata" className="opt">
+                <NavLink to="/kata" className="opt" onClick={showMenu}>
                   <p>KATA</p>
                 </NavLink>
 
-                <NavLink to="/" className="opt">
+                <NavLink to="/" className="opt" onClick={showMenu}>
                   <p>ORGANIZATION</p>
                 </NavLink>
 
-                <NavLink to="/" className="opt">
+                <NavLink to="/" className="opt" onClick={showMenu}>
                   <p>MEMBER</p>
                 </NavLink>
 
-                <NavLink to="/" className="opt">
+                <NavLink to="/" className="opt" onClick={showMenu}>
                   <p>SERVICE</p>
                 </NavLink>
 
-                <NavLink to="/" className="opt">
+                <NavLink to="/" className="opt" onClick={showMenu}>
                   <p>CONTACT</p>
                 </NavLink>
               </nav>
