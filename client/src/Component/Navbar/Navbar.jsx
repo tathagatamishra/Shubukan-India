@@ -4,19 +4,7 @@ import { NavLink } from "react-router-dom";
 
 import "./Navbar.scss";
 
-export default function Navbar(props) {
-  const [isBurger, setIsBurger] = useState(true);
-  const [isOption, setIsOption] = useState(false);
-  const [burgerStyle, setBurgerStyle] = useState({
-    height: "1rem",
-    transition: "all .3s ease-in-out",
-  });
-  const [empty, setEmpty] = useState({ height: "0rem", display: "none" });
-  const [xRotate, setXRotate] = useState({});
-  const [yRotate, setYRotate] = useState({});
-  const [zGradient, setZGradient] = useState({
-    background: "linear-gradient(to left, #A64B37 20%, transparent 100%)",
-  });
+export default function Navbar() {
 
   const [position, setPosition] = useState({ top: "0rem" });
   const [lastScrollTop, setLastScrollTop] = useState(Infinity);
@@ -42,170 +30,6 @@ export default function Navbar(props) {
     setLastScrollTop(scrollTop); //New Position Stored
   });
 
-  const option = (
-    <nav className="options">
-      <NavLink to="/" className="menuDiv">
-        <p>HOME</p>
-        <div></div>
-      </NavLink>
-
-      {/* <NavLink to="/" className="menuDiv">
-    <p>ORGANIZATION</p>
-    <div></div>
-  </NavLink> */}
-
-      <NavLink to="/kata" className="menuDiv">
-        <p>KATA</p>
-        <div></div>
-      </NavLink>
-
-      {/* <NavLink to="/" className="menuDiv">
-    <p>MEMBER</p>
-    <div></div>
-  </NavLink> */}
-
-      {/* <NavLink to="/" className="menuDiv">
-    <p>SERVICE</p>
-    <div></div>
-  </NavLink> */}
-
-      <NavLink to="/blog" className="menuDiv">
-        <p>BLOG</p>
-        <div></div>
-      </NavLink>
-
-      <NavLink to="/" className="menuDiv">
-        <p>CONTACT</p>
-        <div></div>
-      </NavLink>
-    </nav>
-  );
-
-  function setStyle() {
-    setIsOption(true);
-    setBurgerStyle({
-      height: "20rem",
-      width: "8rem",
-      transition: "all .3s ease-in-out",
-      background: "linear-gradient(to top, #D2D9D3, transparent)",
-    });
-    setEmpty({ height: "3rem" });
-    setXRotate({
-      transform: "rotate(15deg)",
-      background: "radial-gradient(circle, #d1a59b 20%, transparent 100%)",
-    });
-    setYRotate({
-      transform: "rotate(-15deg)",
-      background: "radial-gradient(circle, #d1a59b 20%, transparent 100%)",
-    });
-    setZGradient({
-      background: "radial-gradient(circle, #A64B37 20%, transparent 100%)",
-    });
-  }
-  function removeStyle() {
-    setIsOption(false);
-    setBurgerStyle({
-      height: "1rem",
-      transition: "all .3s ease-in-out",
-    });
-    setEmpty({ height: "0rem", display: "none" });
-    setZGradient({
-      background: "linear-gradient(to left, #A64B37 20%, transparent 100%)",
-    });
-    setXRotate({});
-    setYRotate({});
-    console.log("lol");
-  }
-  function lineStyle() {
-    setZGradient({
-      background: "radial-gradient(circle, #A64B37 20%, transparent 100%)",
-    });
-    if (!isOption) {
-      setXRotate({
-        background: "radial-gradient(circle, #d1a59b 20%, transparent 100%)",
-      });
-      setYRotate({
-        background: "radial-gradient(circle, #d1a59b 20%, transparent 100%)",
-      });
-    }
-  }
-  function notLineStyle() {
-    if (!isOption) {
-      setZGradient({
-        background: "linear-gradient(to left, #A64B37 20%, transparent 100%)",
-      });
-      setXRotate({
-        background: "linear-gradient(to left, #d1a59b 20%, transparent 100%)",
-      });
-      setYRotate({
-        background: "linear-gradient(to left, #d1a59b 20%, transparent 100%)",
-      });
-    }
-  }
-
-  const burger = (
-    <>
-      <nav
-        className="burger"
-        style={burgerStyle}
-        // onMouseOver={lineStyle}
-        onClick={() => {
-          lineStyle();
-          setStyle();
-        }}
-        // onMouseOut={() => {
-        //   notLineStyle();
-        // }}
-      >
-        <div
-          className="empty"
-          style={empty}
-          onClick={() => {
-            notLineStyle();
-            removeStyle();
-            console.log("gg");
-          }}
-        ></div>
-        <div className="burgerLine">
-          <div className="x" style={xRotate}></div>
-          <div className="y" style={yRotate}></div>
-          {isOption && (
-            <nav className="optionsMobo">
-              <NavLink to="/" className="menuDivMobo">
-                <p>HOME</p>
-              </NavLink>
-
-              <NavLink to="/" className="menuDivMobo">
-                <p>ORGANIZATION</p>
-              </NavLink>
-
-              <NavLink to="/kata" className="menuDivMobo">
-                <p>KATA</p>
-              </NavLink>
-
-              <NavLink to="/" className="menuDivMobo">
-                <p>MEMBER</p>
-              </NavLink>
-
-              <NavLink to="/" className="menuDivMobo">
-                <p>SERVICE</p>
-              </NavLink>
-
-              <NavLink to="/blog" className="menuDivMobo">
-                <p>BLOG</p>
-              </NavLink>
-
-              <NavLink to="/" className="menuDivMobo">
-                <p>CONTACT</p>
-              </NavLink>
-            </nav>
-          )}
-          <div className="z" style={zGradient}></div>
-        </div>
-      </nav>
-    </>
-  );
-
   function showMenu() {
     if (isMenu == true) setIsMenu(false);
     else if (isMenu == false) setIsMenu(true);
@@ -218,7 +42,6 @@ export default function Navbar(props) {
         <img className="logo1" src="shubukan.png" />
         <img className="logo2" src="logo.png" />
       </section>
-      {/* {isBurger ? burger : option} */}
 
       <section className="menu">
         <div className="menuStart" onClick={showMenu}></div>
@@ -226,33 +49,36 @@ export default function Navbar(props) {
           <>
             <div className="menuBG"></div>
             <div className="menuBox">
-              <NavLink to="/" className="menuDivMobo">
-                <p>HOME</p>
-              </NavLink>
+              {/* <img src="oldpaper.png" alt="" /> */}
+              <nav className="nav">
+                <NavLink to="/" className="opt">
+                  <p>HOME</p>
+                </NavLink>
 
-              <NavLink to="/" className="menuDivMobo">
-                <p>ORGANIZATION</p>
-              </NavLink>
+                <NavLink to="/blog" className="opt">
+                  <p>BLOG</p>
+                </NavLink>
 
-              <NavLink to="/kata" className="menuDivMobo">
-                <p>KATA</p>
-              </NavLink>
+                <NavLink to="/kata" className="opt">
+                  <p>KATA</p>
+                </NavLink>
 
-              <NavLink to="/" className="menuDivMobo">
-                <p>MEMBER</p>
-              </NavLink>
+                <NavLink to="/" className="opt">
+                  <p>ORGANIZATION</p>
+                </NavLink>
 
-              <NavLink to="/" className="menuDivMobo">
-                <p>SERVICE</p>
-              </NavLink>
+                <NavLink to="/" className="opt">
+                  <p>MEMBER</p>
+                </NavLink>
 
-              <NavLink to="/blog" className="menuDivMobo">
-                <p>BLOG</p>
-              </NavLink>
+                <NavLink to="/" className="opt">
+                  <p>SERVICE</p>
+                </NavLink>
 
-              <NavLink to="/" className="menuDivMobo">
-                <p>CONTACT</p>
-              </NavLink>
+                <NavLink to="/" className="opt">
+                  <p>CONTACT</p>
+                </NavLink>
+              </nav>
             </div>
           </>
         )}
