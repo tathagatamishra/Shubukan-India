@@ -79,7 +79,7 @@
             // border: solid;
             overflow: hidden;
             // background: rgb(169, 176, 167);
-            background-image: url('oldpaper.png');
+            background-image: url('https://github.com/tathagatamishra/Shubukan-India/blob/main/client/public/oldpaper.png?raw=true');
 
             display: flex;
             flex-direction: column;
@@ -123,6 +123,8 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+
+                    transition: 200ms;
 
                     & p {
                         // padding: 0;
@@ -262,6 +264,28 @@
                 & .nav {
                     & .opt {
                         height: 3.5rem;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-height: 515px) {
+        & .menu {
+            & .menuBox {
+                & .nav {
+                    & .opt {
+                        height: 3rem;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-height: 430px) {
+        & .menu {
+            & .menuBox {
+                & .nav {
+                    & .opt {
+                        height: 2rem;
                     }
                 }
             }
