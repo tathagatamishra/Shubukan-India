@@ -44,7 +44,10 @@ export default function Navbar() {
       </section>
 
       <section className="menu">
-        <div className="menuStart" onClick={showMenu}></div>
+        <div className="menuStart" onClick={showMenu}>
+          <div className="lines"></div>
+          <div className="lines"></div>
+        </div>
         {isMenu && (
           <>
             <div className="menuBG"></div>
