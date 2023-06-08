@@ -48,9 +48,10 @@ export default function Navbar() {
           <div className="lines"></div>
           <div className="lines"></div>
         </div>
+
         {isMenu && (
           <>
-            <div className="menuBG"></div>
+            <div className="menuBG" onClick={() => setIsMenu(false)}></div>
             <div className="menuBox">
               {/* <img src="oldpaper.png" alt="" /> */}
               <nav className="nav">

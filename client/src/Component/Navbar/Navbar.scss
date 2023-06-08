@@ -71,15 +71,16 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: flex-end;
-            
+
             & .lines {
                 width: 100px;
                 height: 4px;
-                background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(42,32,28,1) 100%);
+                background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(42, 32, 28, 1) 100%);
                 transition: 100ms;
             }
-            
+
             &:hover {
+
                 // background: rgb(244, 45, 0);
                 & .lines {
                     width: 150px;
@@ -97,7 +98,7 @@
             overflow: hidden;
             // background: rgb(169, 176, 167);
             background-image: url('https://github.com/tathagatamishra/Shubukan-India/blob/main/client/public/oldpaper.png?raw=true');
-            
+
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -134,7 +135,6 @@
                     // border: solid;
                     color: rgb(36, 35, 35);
                     text-decoration: none;
-                    font-family: 'GFS Neohellenic', sans-serif;
 
                     display: flex;
                     flex-direction: column;
@@ -152,7 +152,8 @@
                         text-decoration: none;
                         font-size: 18px;
                         font-weight: 900;
-                        font-family: 'GFS Neohellenic', sans-serif;
+                       
+                        font-family: 'Philosopher', sans-serif;
 
                         transition: 0.3s ease 0s, left 0.3s ease 0s;
 
