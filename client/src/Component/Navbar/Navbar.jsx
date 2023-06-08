@@ -5,11 +5,11 @@ import { NavLink } from "react-router-dom";
 import "./Navbar.scss";
 
 export default function Navbar() {
-
   const [position, setPosition] = useState({ top: "0rem" });
   const [lastScrollTop, setLastScrollTop] = useState(Infinity);
 
   const [isMenu, setIsMenu] = useState(false);
+  const [menuStyle, setMenuStyle] = useState({});
 
   // This Variable will store the top position
 
@@ -31,8 +31,17 @@ export default function Navbar() {
   });
 
   function showMenu() {
-    if (isMenu == true) setIsMenu(false);
-    else if (isMenu == false) setIsMenu(true);
+    if (isMenu == true) {
+      setIsMenu(false);
+      setMenuStyle({});
+    } else if (isMenu == false) {
+      setIsMenu(true);
+      setMenuStyle({
+        position: "fixed",
+        top: "0",
+        right: "0",
+      });
+    }
   }
 
   return (
@@ -44,14 +53,14 @@ export default function Navbar() {
       </section>
 
       <section className="menu">
-        <div className="menuStart" onClick={showMenu}>
+        <div className="menuStart" onClick={showMenu} style={menuStyle}>
           <div className="lines"></div>
           <div className="lines"></div>
         </div>
 
         {isMenu && (
           <>
-            <div className="menuBG" onClick={() => setIsMenu(false)}></div>
+            <div className="menuBG" onClick={showMenu}></div>
             <div className="menuBox">
               {/* <img src="oldpaper.png" alt="" /> */}
               <nav className="nav">
