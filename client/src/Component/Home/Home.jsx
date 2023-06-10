@@ -7,6 +7,8 @@ export default function Home() {
   const [startX, setStartX] = useState(null);
   const [scrollLeft, setScrollLeft] = useState(null);
   const [item, setItem] = useState(".items1");
+  const [popImg, setPopImg] = useState("");
+  const [imgClicked, setImgClicked] = useState(false);
 
   useEffect(() => {
     const sliderElement = document.querySelector(item);
@@ -53,6 +55,16 @@ export default function Home() {
       }
     };
   }, [slider, isDown, startX, scrollLeft, item]);
+
+  function imgPop() {
+    if (imgClicked == true) {
+      setPopImg("");
+      setImgClicked(false)
+    } else if (imgClicked == false) {
+      setPopImg("chibana.jpg");
+      setImgClicked(true)
+    }
+  }
 
   return (
     <div className="Home">
@@ -105,10 +117,19 @@ export default function Home() {
         </div>
       </section>
 
+      {imgClicked && (
+        <div className="popUp">
+          <div className="popBack" onClick={imgPop}></div>
+          <div className="imgPop">
+            <img src={popImg} alt="image" />
+          </div>
+        </div>
+      )}
+
       <section className="gallery">
         <h1 className="galleryTop">Gallery</h1>
         <div>
-          <div className="image">
+          <div className="image" onClick={imgPop}>
             <img src="chibana.jpg" alt="image" />
           </div>
           <div className="image">
