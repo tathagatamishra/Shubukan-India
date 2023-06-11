@@ -56,13 +56,13 @@ export default function Home() {
     };
   }, [slider, isDown, startX, scrollLeft, item]);
 
-  function imgPop() {
+  function imgPop(srcValue ) {
     if (imgClicked == true) {
       setPopImg("");
-      setImgClicked(false)
+      setImgClicked(false);
     } else if (imgClicked == false) {
-      setPopImg("chibana.jpg");
-      setImgClicked(true)
+      setPopImg(srcValue);
+      setImgClicked(true);
     }
   }
 
@@ -129,37 +129,37 @@ export default function Home() {
       <section className="gallery">
         <h1 className="galleryTop">Gallery</h1>
         <div>
-          <div className="image" onClick={imgPop}>
+          <div className="image" onClick={()=>imgPop('chibana.jpg')}>
             <img src="chibana.jpg" alt="image" />
           </div>
-          <div className="image">
+          <div className="image" onClick={()=>imgPop('mag.jpg')}>
             <img src="mag.jpg" alt="image" />
           </div>
-          <div className="image">
+          <div className="image" onClick={()=>imgPop('uema.jpg')}>
             <img src="uema.jpg" alt="image" />
           </div>
-          <div className="image">
+          <div className="image" onClick={()=>imgPop('yasuhiro.jpg')}>
             <img src="yasuhiro.jpg" alt="image" />
           </div>
-          <div className="image">
+          <div className="image" onClick={()=>imgPop('https://images.unsplash.com/photo-1460411794035-42aac080490a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGFic3RyYWN0JTIwJTIwc2t5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60')}>
             <img
               src="https://images.unsplash.com/photo-1460411794035-42aac080490a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGFic3RyYWN0JTIwJTIwc2t5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
               alt="image"
             />
           </div>
-          <div className="image">
+          <div className="image" onClick={()=>imgPop('mag2.jpg')}>
             <img src="mag2.jpg" alt="image" />
           </div>
-          <div className="image">
+          <div className="image" onClick={()=>imgPop('takeshi.jpg')}>
             <img src="takeshi.jpg" alt="image" />
           </div>
-          <div className="image">
+          <div className="image" onClick={()=>imgPop('https://images.unsplash.com/photo-1509114397022-ed747cca3f65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YWJzdHJhY3QlMjAlMjBza3l8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60')}>
             <img
               src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YWJzdHJhY3QlMjAlMjBza3l8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
               alt="image"
             />
           </div>
-          <div className="image">
+          <div className="image" onClick={()=>imgPop('sensei.jpg')}>
             <img src="sensei.jpg" alt="image" />
           </div>
         </div>
